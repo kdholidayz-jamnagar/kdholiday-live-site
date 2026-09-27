@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% set siteUrl = company.website %}
+  {% set pageTitle = title + " | " + company.name %}
+  {% set pageDescription = description or (company.tagline + " Domestic and international travel consulting from Jamnagar, India, with a branch in Eldoret, Kenya.") %}
+  {% set canonicalUrl = siteUrl + page.url %}
+  {% set resolvedOgImage = ogImage or heroImage or "/images/brand/logo-full.png" %}
+  {% set ogImageUrl = resolvedOgImage if "http" in resolvedOgImage else siteUrl + resolvedOgImage %}
+  <title>{{ pageTitle }}</title>
+  <meta name="description" content="{{ pageDescription }}">
+  <meta name="robots" content="{{ robots or 'index, follow' }}">
+  <link rel="canonical" href="{{ canonicalUrl }}">
+
+  <meta property="og:type" content="{{ ogType or 'website' }}">
+  <meta property="og:site_name" content="{{ company.name }}">
+  <meta property="og:title" content="{{ pageTitle }}">
+  <meta property="og:description" content="{{ pageDescription }}">
+  <meta property="og:url" content="{{ canonicalUrl }}">
+  <meta property="og:image" content="{{ ogImageUrl }}">
+  <meta property="og:locale" content="en_IN">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ pageTitle }}">
+  <meta name="twitter:description" content="{{ pageDescription }}">
+  <meta name="twitter:image" content="{{ ogImageUrl }}">
+
+  <link rel="icon" href="/images/brand/kd-icon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/brand/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/brand/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/images/brand/apple-touch-icon.png">
+  <link rel="manifest" href="/images/brand/site.webmanifest">
+  <meta name="theme-color" content="#204d82">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  {% if preloadImage %}<link rel="preload" as="image" href="{{ preloadImage }}" fetchpriority="high">{% endif %}
+  <link rel="stylesheet" href="/css/tokens.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/vendor/slick.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": {{ company.name | json | safe }},
+    "legalName": {{ company.legalName | json | safe }},
+    "url": {{ siteUrl | json | safe }},
+    "logo": {{ (siteUrl + "/images/brand/logo-full.png") | json | safe }},
+    "image": {{ (siteUrl + "/images/brand/logo-full.png") | json | safe }},
+    "description": {{ company.tagline | json | safe }},
+    "email": {{ company.email | json | safe }},
+    "telephone": {{ company.primaryPhone | json | safe }},
+    "foundingDate": "{{ company.founded }}",
+    {% if team and team.length %}
+    "founder": {
+      "@type": "Person",
+      "name": {{ team[0].name | json | safe }},
+      "jobTitle": {{ team[0].role | json | safe }},
+      "image": {{ (siteUrl + team[0].photo) | json | safe }}
+    },
+    {% endif %}
+    "address": [
+      {% for office in company.offices %}
+      {
+        "@type": "PostalAddress",
+        "streetAddress": {{ office.address | json | safe }},
+        "addressLocality": {{ office.city | json | safe }},
+        "addressCountry": {{ office.country | json | safe }}
+      }{% if not loop.last %},{% endif %}
+      {% endfor %}
+    ],
+    "sameAs": [
+      {% if company.socials.instagram %}{{ company.socials.instagram | json | safe }}{% endif %}
+      {% if company.socials.facebook and company.socials.facebook != company.socials.instagram %},{{ company.socials.facebook | json | safe }}{% endif %}
+      {% if company.socials.youtube %},{{ company.socials.youtube | json | safe }}{% endif %}
+      {% if company.socials.linkedin %},{{ company.socials.linkedin | json | safe }}{% endif %}
+    ]
+  }
+  </script>
+</head>
+<body>
+<div class="coming-soon" id="comingSoon">
+    <div class="coming-soon__glass">
+        <div class="coming-soon__logo-wrap">
+            <img src="/images/brand/logo-full.png" alt="{{ company.name }}" class="coming-soon__logo">
+        </div>
+        <p class="coming-soon__tagline">{{ company.tagline }}</p>
+        <div class="coming-soon__timer" id="csTimer">
+            <div class="coming-soon__unit">
+                <span class="coming-soon__value" id="csHours">00</span>
+                <span class="coming-soon__label">Hours</span>
+            </div>
+            <div class="coming-soon__unit">
+                <span class="coming-soon__value" id="csMins">00</span>
+                <span class="coming-soon__label">Minutes</span>
+            </div>
+            <div class="coming-soon__unit">
+                <span class="coming-soon__value" id="csSecs">00</span>
+                <span class="coming-soon__label">Seconds</span>
+            </div>
+        </div>
+        <div class="coming-soon__final" id="csFinal">10</div>
+        <p class="coming-soon__note">Something exciting is on its way. We're putting the final touches on your next
+            travel experience.</p>
+    </div>
+</div>
+<script>
+    (function () {
+        var target = new Date(2026, 8, 27, 12, 0, 0, 0).getTime();
+        var el = document.getElementById("comingSoon");
+        if (!el) return;
+        var finalEl = document.getElementById("csFinal");
+        var hEl = document.getElementById("csHours");
+        var mEl = document.getElementById("csMins");
+        var sEl = document.getElementById("csSecs");
+        var intervalId = null;
+
+        function pad(n) {
+            n = String(n);
+            return n.length < 2 ? "0" + n : n;
+        }
+
+        function launch() {
+            el.classList.add("is-launched");
+            document.documentElement.classList.remove("coming-soon-lock");
+            document.body.classList.remove("coming-soon-lock");
+            if (intervalId) clearInterval(intervalId);
+        }
+
+        function tick() {
+            var diff = target - Date.now();
+            if (diff <= 0) {
+                launch();
+                return;
+            }
+            if (diff <= 10000) {
+                el.classList.add("is-final");
+                finalEl.textContent = Math.ceil(diff / 1000);
+            } else {
+                el.classList.remove("is-final");
+                var totalSeconds = Math.floor(diff / 1000);
+                hEl.textContent = pad(Math.floor(totalSeconds / 3600));
+                mEl.textContent = pad(Math.floor((totalSeconds % 3600) / 60));
+                sEl.textContent = pad(totalSeconds % 60);
+            }
+        }
+
+        if (target - Date.now() <= 0) {
+            launch();
+        } else {
+            document.documentElement.classList.add("coming-soon-lock");
+            document.body.classList.add("coming-soon-lock");
+            tick();
+            intervalId = setInterval(tick, 250);
+        }
+    })();
+</script>
+  {% include "partials/header.njk" %}
+  <main>
+    {{ content | safe }}
+  </main>
+  {% include "partials/footer.njk" %}
+  {% include "partials/drawer.njk" %}
+  <a class="whatsapp-float" href="{{ company.whatsappNumber | whatsappLink('Hi KD Holidayz, I would like to plan a trip.') }}" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">💬</a>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ripple" id="cursorRipple" aria-hidden="true"></div>
+  <script>
+    window.KD_FORM_ENDPOINT = {{ formConfig.googleSheetsWebAppUrl | json | safe }};
+    window.KD_RECAPTCHA_SITE_KEY = {{ formConfig.recaptchaSiteKey | json | safe }};
+  </script>
+  <script src="/js/vendor/gsap.min.js" defer></script>
+  <script src="/js/vendor/lottie.min.js" defer></script>
+  {% if formConfig.recaptchaSiteKey %}
+  <script src="https://www.google.com/recaptcha/api.js?onload=onRecaptchaLoad&render=explicit" async defer></script>
+  {% endif %}
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

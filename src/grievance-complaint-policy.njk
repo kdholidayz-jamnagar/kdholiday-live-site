@@ -1,0 +1,363 @@
+---
+layout: layouts/base.njk
+title: "Customer Grievance & Complaint Policy"
+description: "How to raise a complaint with KD Holidayz and how it is reviewed, escalated and resolved."
+---
+{% import "partials/page-banner.njk" as banner with context %}
+{% import "partials/icons.njk" as icon %}
+{% set india = company.offices[0] %}
+{% set kenya = company.offices[1] %}
+
+{{ banner.render([{"label":"Home","url":"/"},{"label":"Grievance & Complaint Policy"}], "🎧 We're Listening", "Customer Grievance & Complaint Policy", null, "grievance-complaint-policy") }}
+
+<section class="privacy-v2">
+  <div class="container">
+    <div class="legal-meta text-muted">
+      <span class="pill">Effective Date: 22 September 2026</span>
+      <span class="pill">Last Updated: 22 September 2026</span>
+    </div>
+
+    <div class="privacy-v2__layout">
+      <aside class="privacy-v2__sidebar">
+        <div class="card privacy-v2__sidebar-card">
+          <div class="privacy-v2__progress" aria-hidden="true"><div class="privacy-v2__progress-bar" id="pvProgressBar"></div></div>
+          <div class="privacy-v2__meta text-muted">📖 23 sections · ~6 min read</div>
+          <nav class="privacy-v2__nav" id="pvNav" aria-label="Grievance policy categories">
+            <a href="#cat-about" data-cat="cat-about"><span class="privacy-v2__nav-icon">{{ icon.render("tag", 16) }}</span>About This Policy</a>
+            <a href="#cat-howto" data-cat="cat-howto"><span class="privacy-v2__nav-icon">{{ icon.render("note", 16) }}</span>How to Complain</a>
+            <a href="#cat-handling" data-cat="cat-handling"><span class="privacy-v2__nav-icon">{{ icon.render("compass", 16) }}</span>How We Handle It</a>
+            <a href="#cat-special" data-cat="cat-special"><span class="privacy-v2__nav-icon">{{ icon.render("globe", 16) }}</span>Special Complaint Types</a>
+            <a href="#cat-fairuse" data-cat="cat-fairuse"><span class="privacy-v2__nav-icon">{{ icon.render("shield", 16) }}</span>Fair Use &amp; Confidentiality</a>
+            <a href="#cat-legal" data-cat="cat-legal"><span class="privacy-v2__nav-icon">{{ icon.render("mail", 16) }}</span>Legal &amp; Contact</a>
+          </nav>
+          <div class="privacy-v2__actions">
+            <button type="button" class="btn btn--ghost btn--sm" id="pvExpandAll">Expand All</button>
+            <button type="button" class="btn btn--ghost btn--sm" id="pvCollapseAll">Collapse All</button>
+          </div>
+        </div>
+      </aside>
+
+      <div class="privacy-v2__main">
+        <section class="privacy-v2__category" id="cat-about">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("tag", 20) }}</span>
+            <h2>About This Policy</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item is-open">
+              <button class="accordion__trigger" type="button" aria-expanded="true">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">1. Purpose</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>This Grievance &amp; Complaint Policy explains how customers can raise concerns regarding services provided or arranged by KD Holidayz and how KD Holidayz will review and respond to complaints.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">2. Who May Raise a Complaint</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Customers, travellers, authorised booking representatives and, where appropriate, persons directly affected by a KD Holidayz service may submit a complaint.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">3. Types of Complaints</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Complaints may relate to bookings, payments, quotations, flights, hotels, tour packages, visa assistance, insurance assistance, communication, documentation, supplier services or other travel-related services provided or arranged by KD Holidayz.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="privacy-v2__category" id="cat-howto">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("note", 20) }}</span>
+            <h2>How to Complain</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">4. First Point of Contact</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Customers are encouraged to contact KD Holidayz as soon as an issue arises. For problems during travel, customers should also notify the relevant hotel, airline, DMC, transport provider or activity operator immediately where that supplier is best placed to resolve the issue.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">5. How to Submit a Complaint</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Complaints should preferably be submitted in writing by email to info@kdholidayz.in. Customers may also contact KD Holidayz by phone or WhatsApp using the official contact details. The complaint should include the booking/reference number, traveller name, date of service, description of the issue and supporting documents where available.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">6. Information to Include</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>To help us investigate efficiently, customers should provide relevant invoices, booking confirmations, photographs, receipts, correspondence, supplier reports, payment references and any other evidence supporting the complaint.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">10. Complaints During Travel</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>For urgent issues affecting an ongoing trip, customers should contact KD Holidayz and the relevant supplier immediately. Delaying notification until after the trip may reduce the ability of KD Holidayz or the supplier to investigate or correct the issue.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="privacy-v2__category" id="cat-handling">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("compass", 20) }}</span>
+            <h2>How We Handle It</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">7. Acknowledgement</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>KD Holidayz will endeavour to acknowledge receipt of a written complaint within a reasonable period. The time required to investigate may depend on the complexity of the matter and whether information must be obtained from an airline, hotel, DMC, insurer, visa provider or other supplier.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">8. Investigation</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Complaints will be reviewed based on the booking records, communications, supplier information, applicable terms and conditions, supporting evidence and relevant law. KD Holidayz may request additional information from the customer.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">9. Supplier-Related Complaints</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Where the complaint concerns an independent supplier, KD Holidayz may communicate with that supplier and assist the customer. The supplier may have its own complaint, refund or compensation process and its decision may determine the available remedy, subject to applicable law.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">15. Escalation</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>If a customer is dissatisfied with the response, the matter may be escalated internally by requesting a review from the management of KD Holidayz. The customer should provide the previous complaint reference and explain the specific unresolved issue.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="privacy-v2__category" id="cat-special">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("globe", 20) }}</span>
+            <h2>Special Complaint Types</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">11. Refund and Compensation Requests</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>A complaint does not automatically create an entitlement to a refund or compensation. Any refund, credit, replacement or compensation will depend on the applicable booking terms, supplier rules, insurance policy, applicable law and facts of the case.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">12. Visa Complaints</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Visa decisions are made by the relevant embassy, consulate or immigration authority. KD Holidayz can review complaints regarding its own assistance or communication but cannot overturn or guarantee a government visa decision.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">13. Insurance Complaints</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Insurance claim decisions are made by the relevant insurer. KD Holidayz may assist with communication where appropriate, but insurance disputes should also be raised directly with the insurer under its claims or grievance procedure.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">14. Privacy and Data Complaints</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Privacy-related complaints concerning personal information may be submitted to info@kdholidayz.in with the subject line <strong>Privacy Complaint – KD Holidayz</strong>. Such matters will be handled in accordance with the KD Holidayz <a href="/privacy-policy/">Privacy Policy</a> and applicable data protection requirements.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">16. Third-Party and Government Complaints</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Where a matter is regulated or controlled by an airline, insurer, hotel, visa authority, payment provider or other third party, customers may also use the grievance or complaint mechanism provided by that organisation.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="privacy-v2__category" id="cat-fairuse">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("shield", 20) }}</span>
+            <h2>Fair Use &amp; Confidentiality</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">17. Fraudulent or Abusive Complaints</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>KD Holidayz may request evidence where a complaint involves disputed transactions, suspected fraud or conflicting information. Threatening, abusive or unlawful communications will not be treated as a substitute for the formal complaint process.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">18. Confidentiality</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>KD Holidayz will handle complaint information appropriately and may share relevant information with suppliers, insurers, payment providers, authorities or other parties where necessary to investigate or resolve the complaint and where permitted by applicable law.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">19. Records</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>KD Holidayz may retain complaint records and related communications for reasonable business, legal, accounting, dispute-resolution or compliance purposes in accordance with applicable law and its Privacy Policy.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">20. No Waiver of Legal Rights</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Nothing in this policy limits any rights or remedies available to a customer under applicable law.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="privacy-v2__category" id="cat-legal">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("mail", 20) }}</span>
+            <h2>Legal &amp; Contact</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">21. Contact Details</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>KD Holidayz, Registered Proprietorship. Privacy/Complaint Email: info@kdholidayz.in</p>
+                <div class="legal-offices">
+                  <div class="legal-office">
+                    <span class="pill office-card__label">India</span>
+                    <div class="office-card__row"><span class="text-muted">{{ icon.render("pin", 18) }}</span><span>{{ india.address }}</span></div>
+                    {% for phone in india.phones %}<div class="office-card__row"><span class="text-muted">{{ icon.render("phone", 18) }}</span><a href="{{ phone | telLink }}">{{ phone }}</a></div>{% endfor %}
+                    <div class="office-card__row"><span class="text-muted">{{ icon.render("mail", 18) }}</span><a href="mailto:{{ india.email }}">{{ india.email }}</a></div>
+                  </div>
+                  <div class="legal-office">
+                    <span class="pill office-card__label">Kenya Branch</span>
+                    <div class="office-card__row"><span class="text-muted">{{ icon.render("pin", 18) }}</span><span>{{ kenya.address }}</span></div>
+                    {% for phone in kenya.phones %}<div class="office-card__row"><span class="text-muted">{{ icon.render("phone", 18) }}</span><a href="{{ phone | telLink }}">{{ phone }}</a></div>{% endfor %}
+                    <div class="office-card__row"><span class="text-muted">{{ icon.render("mail", 18) }}</span><a href="mailto:{{ kenya.email }}">{{ kenya.email }}</a></div>
+                  </div>
+                </div>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">22. Policy Updates</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>KD Holidayz may update this policy from time to time to reflect changes in services, law or internal processes. The current version will be published on the website.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">23. Customer Acknowledgement</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Customers are encouraged to raise issues promptly and provide complete information so that KD Holidayz and relevant suppliers have a reasonable opportunity to investigate and resolve the matter.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <p class="text-muted" style="text-align:center; margin-top:var(--space-6);">© 2026 KD Holidayz. All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var progressBar = document.getElementById("pvProgressBar");
+  if (progressBar) {
+    var onScroll = function () {
+      var el = document.documentElement;
+      var scrollTop = el.scrollTop || document.body.scrollTop;
+      var height = el.scrollHeight - el.clientHeight;
+      var pct = height > 0 ? (scrollTop / height) * 100 : 0;
+      progressBar.style.width = pct + "%";
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
+  var navLinks = document.querySelectorAll("#pvNav a");
+  var categories = document.querySelectorAll(".privacy-v2__category");
+  if (categories.length && navLinks.length && "IntersectionObserver" in window) {
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(function (l) { l.classList.remove("is-active"); });
+        var link = document.querySelector('#pvNav a[data-cat="' + entry.target.id + '"]');
+        if (link) link.classList.add("is-active");
+      });
+    }, { rootMargin: "-15% 0px -70% 0px", threshold: 0 });
+    categories.forEach(function (c) { obs.observe(c); });
+  }
+
+  var expandBtn = document.getElementById("pvExpandAll");
+  var collapseBtn = document.getElementById("pvCollapseAll");
+  function setAll(open) {
+    document.querySelectorAll(".privacy-v2 .accordion__item").forEach(function (item) {
+      item.classList.toggle("is-open", open);
+      var trigger = item.querySelector(".accordion__trigger");
+      if (trigger) trigger.setAttribute("aria-expanded", String(open));
+    });
+  }
+  if (expandBtn) expandBtn.addEventListener("click", function () { setAll(true); });
+  if (collapseBtn) collapseBtn.addEventListener("click", function () { setAll(false); });
+})();
+</script>

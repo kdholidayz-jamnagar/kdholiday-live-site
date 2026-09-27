@@ -1,0 +1,363 @@
+---
+layout: layouts/base.njk
+title: "Travel Insurance Disclaimer & Terms"
+description: "KD Holidayz travel insurance disclaimer: the role KD Holidayz plays in arranging insurance, and what depends on the insurer's policy."
+---
+{% import "partials/page-banner.njk" as banner with context %}
+{% import "partials/icons.njk" as icon %}
+{% set india = company.offices[0] %}
+{% set kenya = company.offices[1] %}
+
+{{ banner.render([{"label":"Home","url":"/"},{"label":"Travel Insurance Disclaimer"}], "🛡️ Travel Insurance", "Travel Insurance Disclaimer & Terms", null, "travel-insurance-disclaimer") }}
+
+<section class="privacy-v2">
+  <div class="container">
+    <div class="legal-meta text-muted">
+      <span class="pill">Effective Date: 22 September 2026</span>
+      <span class="pill">Last Updated: 22 September 2026</span>
+    </div>
+
+    <div class="privacy-v2__layout">
+      <aside class="privacy-v2__sidebar">
+        <div class="card privacy-v2__sidebar-card">
+          <div class="privacy-v2__progress" aria-hidden="true"><div class="privacy-v2__progress-bar" id="pvProgressBar"></div></div>
+          <div class="privacy-v2__meta text-muted">📖 23 sections · ~6 min read</div>
+          <nav class="privacy-v2__nav" id="pvNav" aria-label="Travel insurance disclaimer categories">
+            <a href="#cat-about" data-cat="cat-about"><span class="privacy-v2__nav-icon">{{ icon.render("tag", 16) }}</span>About This Cover</a>
+            <a href="#cat-responsibilities" data-cat="cat-responsibilities"><span class="privacy-v2__nav-icon">{{ icon.render("person", 16) }}</span>Your Responsibilities</a>
+            <a href="#cat-coverage" data-cat="cat-coverage"><span class="privacy-v2__nav-icon">{{ icon.render("globe", 16) }}</span>Coverage Scope</a>
+            <a href="#cat-claims" data-cat="cat-claims"><span class="privacy-v2__nav-icon">{{ icon.render("shield", 16) }}</span>Claims &amp; Emergencies</a>
+            <a href="#cat-premiums" data-cat="cat-premiums"><span class="privacy-v2__nav-icon">{{ icon.render("coin", 16) }}</span>Premiums &amp; Third Parties</a>
+            <a href="#cat-legal" data-cat="cat-legal"><span class="privacy-v2__nav-icon">{{ icon.render("mail", 16) }}</span>Legal &amp; Contact</a>
+          </nav>
+          <div class="privacy-v2__actions">
+            <button type="button" class="btn btn--ghost btn--sm" id="pvExpandAll">Expand All</button>
+            <button type="button" class="btn btn--ghost btn--sm" id="pvCollapseAll">Collapse All</button>
+          </div>
+        </div>
+      </aside>
+
+      <div class="privacy-v2__main">
+        <section class="privacy-v2__category" id="cat-about">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("tag", 20) }}</span>
+            <h2>About This Cover</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item is-open">
+              <button class="accordion__trigger" type="button" aria-expanded="true">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">1. Purpose and Scope</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>KD Holidayz may facilitate the purchase or arrangement of travel insurance for customers through an insurance company, authorised intermediary or other third-party provider. This document explains the general role of KD Holidayz and does not replace the insurance policy wording.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">2. Insurance Is a Separate Contract</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>The insurance policy is a contract between the insured traveller and the relevant insurer. The insurer determines coverage, exclusions, claim eligibility, limits, deductibles and settlement. KD Holidayz is not the insurer unless expressly stated in writing.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">3. No Guarantee of Coverage</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Payment of an insurance premium does not guarantee that a claim will be accepted. Coverage depends entirely on the policy terms, conditions, exclusions, limits and circumstances of the claim.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="privacy-v2__category" id="cat-responsibilities">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("person", 20) }}</span>
+            <h2>Your Responsibilities</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">4. Customer Responsibility to Read the Policy</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Customers should read the policy schedule, certificate, wording, exclusions, geographical coverage, benefit limits, deductibles and claim procedures before travel. Customers should contact the insurer directly for clarification of coverage.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">5. Accurate Information</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Customers must provide accurate information when purchasing insurance, including traveller details, age, destination, travel dates, medical or other information where required by the insurer. Incorrect or incomplete information may affect coverage or claims.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">14. Travel Dates and Policy Validity</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Customers must ensure that the insurance policy covers the complete intended travel period and applicable destinations. Changes to travel dates or itinerary may require policy amendment or additional premium, subject to insurer rules.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="privacy-v2__category" id="cat-coverage">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("globe", 20) }}</span>
+            <h2>Coverage Scope</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">6. Pre-Existing Conditions</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Coverage for pre-existing medical conditions, if any, depends on the specific insurance policy. Customers should carefully review the relevant definitions, exclusions and disclosure requirements before purchasing the policy.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">8. Trip Cancellation and Interruption</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Any trip cancellation, curtailment or interruption benefit is subject to the insurer's policy conditions, covered reasons, documentation requirements, limits and exclusions. A travel booking being cancelled does not automatically mean that an insurance claim will be payable.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">9. Baggage and Personal Belongings</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Loss, theft, delay or damage to baggage or personal belongings is covered only if the applicable policy provides such coverage and the claim satisfies its conditions. Customers should obtain appropriate reports and supporting documents where required.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">10. Flight Delay and Missed Connection</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Delay, missed connection or related benefits are subject to the specific policy wording and applicable thresholds. Airline compensation and insurance benefits are separate matters and may be subject to different rules.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">15. Country and Activity Restrictions</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Coverage may be affected by destination restrictions, government advisories, sanctioned territories, adventure activities, hazardous sports or other exclusions. Customers should verify coverage for their specific itinerary and activities before travel.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">16. Visa and Travel Insurance</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Obtaining travel insurance does not guarantee visa approval. Similarly, a visa requirement or proof of insurance requirement does not mean that every insurance policy will satisfy the requirements of a particular embassy or immigration authority. Customers should verify any required minimum coverage.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">17. Force Majeure and Unforeseen Events</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Insurance coverage for pandemics, epidemics, natural disasters, war, terrorism, civil unrest, strikes, government restrictions and other exceptional events depends entirely on the specific policy. Customers should not assume such events are covered.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="privacy-v2__category" id="cat-claims">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("shield", 20) }}</span>
+            <h2>Claims &amp; Emergencies</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">7. Medical and Emergency Assistance</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Where the policy provides emergency assistance, customers should follow the insurer's specified procedure and contact the insurer or assistance provider using the details in the policy. KD Holidayz may assist with communication where reasonably possible but cannot guarantee claim approval or emergency assistance outcomes.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">11. Claims</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Customers are responsible for notifying the insurer within the time specified in the policy and providing required evidence such as medical reports, police reports, airline documents, receipts, booking records or other supporting documents.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">12. Claim Settlement</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>All claims are assessed and settled by the insurer. KD Holidayz cannot approve, reject, quantify or guarantee an insurance claim unless expressly authorised by the insurer to perform a specific administrative role.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">20. Emergency Contact</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Customers should retain the insurer's emergency assistance number, policy number and claim instructions during travel. In a genuine emergency, customers should seek immediate appropriate assistance and notify the insurer as soon as reasonably possible where required.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="privacy-v2__category" id="cat-premiums">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("coin", 20) }}</span>
+            <h2>Premiums &amp; Third Parties</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">13. Insurance Premiums and Refunds</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Insurance premiums and cancellation/refund conditions are governed by the insurer's terms. Once a policy has been issued, the premium may be non-refundable or refundable only under specified circumstances.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">18. Third-Party Insurance Providers</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Where insurance is arranged through a third-party provider, that provider's privacy policy, terms, policy wording and claims process will apply. KD Holidayz is not responsible for the provider's independent processing or claim decision, subject to applicable law.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">19. Data and Medical Information</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Insurance applications and claims may require personal, medical or other sensitive information to be provided to the insurer or authorised assistance provider. Such information will be handled in accordance with applicable law and the relevant provider's privacy terms.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="privacy-v2__category" id="cat-legal">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("mail", 20) }}</span>
+            <h2>Legal &amp; Contact</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">21. Limitation of KD Holidayz's Role</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>KD Holidayz may assist with selecting, arranging or communicating insurance options but does not control the insurer's underwriting, policy terms, claim investigation, claim approval, settlement or payment. Nothing in this disclaimer excludes rights or liabilities that cannot lawfully be excluded.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">22. Contact Details</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>KD Holidayz, Registered Proprietorship</p>
+                <div class="legal-offices">
+                  <div class="legal-office">
+                    <span class="pill office-card__label">India</span>
+                    <div class="office-card__row"><span class="text-muted">{{ icon.render("pin", 18) }}</span><span>{{ india.address }}</span></div>
+                    {% for phone in india.phones %}<div class="office-card__row"><span class="text-muted">{{ icon.render("phone", 18) }}</span><a href="{{ phone | telLink }}">{{ phone }}</a></div>{% endfor %}
+                    <div class="office-card__row"><span class="text-muted">{{ icon.render("mail", 18) }}</span><a href="mailto:{{ india.email }}">{{ india.email }}</a></div>
+                  </div>
+                  <div class="legal-office">
+                    <span class="pill office-card__label">Kenya Branch</span>
+                    <div class="office-card__row"><span class="text-muted">{{ icon.render("pin", 18) }}</span><span>{{ kenya.address }}</span></div>
+                    {% for phone in kenya.phones %}<div class="office-card__row"><span class="text-muted">{{ icon.render("phone", 18) }}</span><a href="{{ phone | telLink }}">{{ phone }}</a></div>{% endfor %}
+                    <div class="office-card__row"><span class="text-muted">{{ icon.render("mail", 18) }}</span><a href="mailto:{{ kenya.email }}">{{ kenya.email }}</a></div>
+                  </div>
+                </div>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">23. Acknowledgement</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>By purchasing or requesting travel insurance through KD Holidayz, the customer acknowledges that the insurer's policy wording governs coverage and claims and that KD Holidayz cannot guarantee the acceptance, amount or timing of any insurance claim.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <p class="text-muted" style="text-align:center; margin-top:var(--space-6);">© 2026 KD Holidayz. All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var progressBar = document.getElementById("pvProgressBar");
+  if (progressBar) {
+    var onScroll = function () {
+      var el = document.documentElement;
+      var scrollTop = el.scrollTop || document.body.scrollTop;
+      var height = el.scrollHeight - el.clientHeight;
+      var pct = height > 0 ? (scrollTop / height) * 100 : 0;
+      progressBar.style.width = pct + "%";
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
+  var navLinks = document.querySelectorAll("#pvNav a");
+  var categories = document.querySelectorAll(".privacy-v2__category");
+  if (categories.length && navLinks.length && "IntersectionObserver" in window) {
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(function (l) { l.classList.remove("is-active"); });
+        var link = document.querySelector('#pvNav a[data-cat="' + entry.target.id + '"]');
+        if (link) link.classList.add("is-active");
+      });
+    }, { rootMargin: "-15% 0px -70% 0px", threshold: 0 });
+    categories.forEach(function (c) { obs.observe(c); });
+  }
+
+  var expandBtn = document.getElementById("pvExpandAll");
+  var collapseBtn = document.getElementById("pvCollapseAll");
+  function setAll(open) {
+    document.querySelectorAll(".privacy-v2 .accordion__item").forEach(function (item) {
+      item.classList.toggle("is-open", open);
+      var trigger = item.querySelector(".accordion__trigger");
+      if (trigger) trigger.setAttribute("aria-expanded", String(open));
+    });
+  }
+  if (expandBtn) expandBtn.addEventListener("click", function () { setAll(true); });
+  if (collapseBtn) collapseBtn.addEventListener("click", function () { setAll(false); });
+})();
+</script>

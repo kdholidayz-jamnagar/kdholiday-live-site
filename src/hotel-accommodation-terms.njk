@@ -1,0 +1,400 @@
+---
+layout: layouts/base.njk
+title: "Hotel & Accommodation Terms & Conditions"
+description: "KD Holidayz hotel and accommodation terms: bookings, rates, check-in/out, cancellation and property rules."
+---
+{% import "partials/page-banner.njk" as banner with context %}
+{% import "partials/icons.njk" as icon %}
+{% set india = company.offices[0] %}
+{% set kenya = company.offices[1] %}
+
+{{ banner.render([{"label":"Home","url":"/"},{"label":"Hotel & Accommodation Terms"}], "🏨 Stays & Hotels", "Hotel & Accommodation Terms & Conditions", null, "hotel-accommodation-terms") }}
+
+<section class="privacy-v2">
+  <div class="container">
+    <div class="legal-meta text-muted">
+      <span class="pill">Effective Date: 22 September 2026</span>
+      <span class="pill">Last Updated: 22 September 2026</span>
+    </div>
+
+    <div class="privacy-v2__layout">
+      <aside class="privacy-v2__sidebar">
+        <div class="card privacy-v2__sidebar-card">
+          <div class="privacy-v2__progress" aria-hidden="true"><div class="privacy-v2__progress-bar" id="pvProgressBar"></div></div>
+          <div class="privacy-v2__meta text-muted">📖 26 sections · ~7 min read</div>
+          <nav class="privacy-v2__nav" id="pvNav" aria-label="Hotel terms categories">
+            <a href="#cat-basics" data-cat="cat-basics"><span class="privacy-v2__nav-icon">{{ icon.render("tag", 16) }}</span>Booking Basics</a>
+            <a href="#cat-stay" data-cat="cat-stay"><span class="privacy-v2__nav-icon">{{ icon.render("person", 16) }}</span>Your Stay</a>
+            <a href="#cat-facilities" data-cat="cat-facilities"><span class="privacy-v2__nav-icon">{{ icon.render("compass", 16) }}</span>Facilities &amp; Requests</a>
+            <a href="#cat-cancellation" data-cat="cat-cancellation"><span class="privacy-v2__nav-icon">{{ icon.render("coin", 16) }}</span>Cancellation &amp; Changes</a>
+            <a href="#cat-rules" data-cat="cat-rules"><span class="privacy-v2__nav-icon">{{ icon.render("shield", 16) }}</span>Rules &amp; Charges</a>
+            <a href="#cat-during" data-cat="cat-during"><span class="privacy-v2__nav-icon">{{ icon.render("globe", 16) }}</span>During Your Stay</a>
+            <a href="#cat-legal" data-cat="cat-legal"><span class="privacy-v2__nav-icon">{{ icon.render("mail", 16) }}</span>Legal &amp; Contact</a>
+          </nav>
+          <div class="privacy-v2__actions">
+            <button type="button" class="btn btn--ghost btn--sm" id="pvExpandAll">Expand All</button>
+            <button type="button" class="btn btn--ghost btn--sm" id="pvCollapseAll">Collapse All</button>
+          </div>
+        </div>
+      </aside>
+
+      <div class="privacy-v2__main">
+        <section class="privacy-v2__category" id="cat-basics">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("tag", 20) }}</span>
+            <h2>Booking Basics</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item is-open">
+              <button class="accordion__trigger" type="button" aria-expanded="true">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">1. Scope</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>These Hotel &amp; Accommodation Terms apply to hotel, resort, villa, apartment and other accommodation bookings arranged by KD Holidayz. They should be read with the property's own terms and the KD Holidayz <a href="/terms-conditions/">Terms &amp; Conditions</a> and <a href="/cancellation-refund-policy/">Booking, Cancellation &amp; Refund Policy</a>.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">2. Booking Confirmation</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>A hotel enquiry, quotation or provisional reservation does not guarantee accommodation. The booking is confirmed only after required payment and written confirmation or a valid hotel/supplier confirmation.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">3. Room Availability and Category</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Room availability, room category, bed configuration, view, occupancy and facilities are subject to the property's confirmation. Photographs and descriptions on our website or marketing materials are indicative and may differ slightly from the actual room.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">4. Rates and Taxes</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Hotel rates may include or exclude taxes, resort fees, tourism fees, service charges, meals or other mandatory charges depending on the booking. The applicable amount will be stated in the quotation or confirmation where reasonably available.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="privacy-v2__category" id="cat-stay">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("person", 20) }}</span>
+            <h2>Your Stay</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">5. Check-In and Check-Out</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Standard check-in and check-out times are determined by the property. Early check-in and late check-out are subject to availability and may incur additional charges. KD Holidayz cannot guarantee early check-in or late check-out unless confirmed by the property.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">6. Identification and Deposit</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Hotels may require passports, government-issued identification, credit/debit card details or a security deposit at check-in. Such requirements are controlled by the property.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">7. Occupancy and Guest Details</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Customers must provide accurate guest names, ages and room occupancy information. Maximum occupancy, extra beds, child policies and infant arrangements are determined by the property.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">8. Children and Extra Beds</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Child policies, age limits, breakfast charges, extra beds and cot availability vary by property. Customers should provide children's ages at the time of booking. Additional charges may apply.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">9. Meals and Meal Plans</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Breakfast, half board, full board, all-inclusive and other meal plans are subject to the confirmed booking. Restaurant opening times, menus and meal inclusions may change according to hotel operations.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="privacy-v2__category" id="cat-facilities">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("compass", 20) }}</span>
+            <h2>Facilities &amp; Requests</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">10. Hotel Facilities</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Swimming pools, restaurants, spas, gyms, kids' clubs, beaches, activities, shuttle services and other facilities may be seasonal, subject to maintenance, weather, capacity or operational restrictions. KD Holidayz cannot guarantee that every advertised facility will be available throughout the stay.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">11. Special Requests</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Requests such as connecting rooms, high floors, specific views, king/twin beds, adjoining rooms, early check-in, accessibility requirements or celebrations are subject to hotel availability and are not guaranteed unless confirmed in writing.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">19. Hotel Ratings</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Hotel star ratings or category descriptions may originate from the property, destination authority, supplier or booking system. Rating systems can vary between destinations and should not be treated as an independent guarantee of facilities or service quality.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">20. Accessibility and Special Needs</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Customers requiring accessible rooms or specific assistance should communicate their requirements before booking. Availability and suitability should be confirmed directly with the property where necessary.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="privacy-v2__category" id="cat-cancellation">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("coin", 20) }}</span>
+            <h2>Cancellation &amp; Changes</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">12. Cancellation and Amendment</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Hotel cancellation and amendment conditions depend on the rate plan and property. Non-refundable, prepaid, promotional and special rates may carry strict restrictions. Applicable penalties and KD Holidayz service charges may apply.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">13. No-Show</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Failure to check in without cancelling within the applicable deadline may result in a no-show charge or loss of the booking according to the property's policy.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">14. Hotel Cancellation or Relocation</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>If a property cancels a confirmed reservation, closes unexpectedly or is unable to honour the booking, KD Holidayz will communicate alternatives or refund options offered by the supplier. Any compensation or relocation is subject to the property's or supplier's terms and applicable law.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">15. Equivalent Accommodation</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Where a supplier provides an alternative or equivalent property because of operational circumstances, KD Holidayz will communicate the available arrangement. Acceptance and any additional cost will be subject to the supplier's terms.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">21. Overbooking and Operational Issues</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Hotels may occasionally experience overbooking or operational issues. Where this occurs, the supplier/property may provide an alternative arrangement in accordance with its policies. KD Holidayz will reasonably assist with communication.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="privacy-v2__category" id="cat-rules">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("shield", 20) }}</span>
+            <h2>Rules &amp; Charges</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">16. Property Rules</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Guests must comply with the hotel's rules regarding smoking, alcohol, pets, noise, visitors, pool use, damage, prohibited items, security and other local requirements. Charges arising from guest conduct may be payable directly by the guest.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">17. Damage and Additional Charges</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Hotels may charge guests for room damage, lost items, excessive cleaning, minibar use, telephone charges, meals, transportation, taxes, resort fees or other incidental expenses. Such charges are the responsibility of the guest.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">18. Resort Fees and Local Taxes</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Certain destinations or properties may impose local tourism taxes, resort fees, environmental fees, city taxes or other mandatory charges. These may be payable at the hotel even if they were not included in the package price, where permitted by applicable rules.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="privacy-v2__category" id="cat-during">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("globe", 20) }}</span>
+            <h2>During Your Stay</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">22. Guest Complaints During Stay</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Guests should report significant room or service issues to the hotel immediately so that the property has an opportunity to resolve them. KD Holidayz should also be informed as soon as reasonably possible where assistance is required.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">23. Third-Party Suppliers</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Accommodation may be supplied through hotels, resorts, DMCs, bed banks or other third-party providers. Their terms may apply in addition to KD Holidayz terms.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">24. Website Descriptions and Images</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Hotel photographs, maps, room images and descriptions are provided for general information. Seasonal changes, renovations, room allocation and local conditions may cause differences between website information and the actual experience.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="privacy-v2__category" id="cat-legal">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("mail", 20) }}</span>
+            <h2>Legal &amp; Contact</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">25. Contact Details</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>KD Holidayz, Registered Proprietorship</p>
+                <div class="legal-offices">
+                  <div class="legal-office">
+                    <span class="pill office-card__label">India</span>
+                    <div class="office-card__row"><span class="text-muted">{{ icon.render("pin", 18) }}</span><span>{{ india.address }}</span></div>
+                    {% for phone in india.phones %}<div class="office-card__row"><span class="text-muted">{{ icon.render("phone", 18) }}</span><a href="{{ phone | telLink }}">{{ phone }}</a></div>{% endfor %}
+                    <div class="office-card__row"><span class="text-muted">{{ icon.render("mail", 18) }}</span><a href="mailto:{{ india.email }}">{{ india.email }}</a></div>
+                  </div>
+                  <div class="legal-office">
+                    <span class="pill office-card__label">Kenya Branch</span>
+                    <div class="office-card__row"><span class="text-muted">{{ icon.render("pin", 18) }}</span><span>{{ kenya.address }}</span></div>
+                    {% for phone in kenya.phones %}<div class="office-card__row"><span class="text-muted">{{ icon.render("phone", 18) }}</span><a href="{{ phone | telLink }}">{{ phone }}</a></div>{% endfor %}
+                    <div class="office-card__row"><span class="text-muted">{{ icon.render("mail", 18) }}</span><a href="mailto:{{ kenya.email }}">{{ kenya.email }}</a></div>
+                  </div>
+                </div>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">26. Acknowledgement</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>By booking accommodation through KD Holidayz, the customer acknowledges that the property's confirmed terms, room conditions, cancellation rules and operational policies apply to the booking and that KD Holidayz cannot guarantee facilities or services controlled by the property.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <p class="text-muted" style="text-align:center; margin-top:var(--space-6);">© 2026 KD Holidayz. All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var progressBar = document.getElementById("pvProgressBar");
+  if (progressBar) {
+    var onScroll = function () {
+      var el = document.documentElement;
+      var scrollTop = el.scrollTop || document.body.scrollTop;
+      var height = el.scrollHeight - el.clientHeight;
+      var pct = height > 0 ? (scrollTop / height) * 100 : 0;
+      progressBar.style.width = pct + "%";
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
+  var navLinks = document.querySelectorAll("#pvNav a");
+  var categories = document.querySelectorAll(".privacy-v2__category");
+  if (categories.length && navLinks.length && "IntersectionObserver" in window) {
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(function (l) { l.classList.remove("is-active"); });
+        var link = document.querySelector('#pvNav a[data-cat="' + entry.target.id + '"]');
+        if (link) link.classList.add("is-active");
+      });
+    }, { rootMargin: "-15% 0px -70% 0px", threshold: 0 });
+    categories.forEach(function (c) { obs.observe(c); });
+  }
+
+  var expandBtn = document.getElementById("pvExpandAll");
+  var collapseBtn = document.getElementById("pvCollapseAll");
+  function setAll(open) {
+    document.querySelectorAll(".privacy-v2 .accordion__item").forEach(function (item) {
+      item.classList.toggle("is-open", open);
+      var trigger = item.querySelector(".accordion__trigger");
+      if (trigger) trigger.setAttribute("aria-expanded", String(open));
+    });
+  }
+  if (expandBtn) expandBtn.addEventListener("click", function () { setAll(true); });
+  if (collapseBtn) collapseBtn.addEventListener("click", function () { setAll(false); });
+})();
+</script>

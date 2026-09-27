@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "kd-holiday-eleventy",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["eleventy", "--serve"],
+      "port": 8080,
+      "autoPort": true
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+---
+layout: layouts/base.njk
+title: "Contact Us"
+description: "Contact KD Holidayz: Head Office in Jamnagar, India and Branch Office in Eldoret, Kenya."
+---
+{% import "macros/cards.njk" as cards %}
+{% import "macros/forms.njk" as forms %}
+{% import "partials/icons.njk" as icon %}
+{% import "partials/page-banner.njk" as banner with context %}
+{% set india = company.offices[0] %}
+{% set kenya = company.offices[1] %}
+
+{{ banner.render([{"label":"Home","url":"/"},{"label":"Contact"}], "📞 Get In Touch", "Let's Plan Your Dream Trip", "Our consultants are ready to help. Reach out however's easiest for you.", "contact") }}
+
+<section class="section--sm contact__info">
+  <div class="container grid grid--5">
+    <div class="card info-card">
+      <div class="icon-badge info-card__icon">{{ icon.lottieRing("forest") }}{{ icon.render("phone", 22) }}</div>
+      <div style="font-weight:700;">Call Us</div>
+      {% for phone in india.phones %}<div class="text-muted" style="font-size:var(--fs-small);"><a href="{{ phone | telLink }}">{{ phone }}</a></div>{% endfor %}
+    </div>
+    <div class="card info-card">
+      <div class="icon-badge info-card__icon icon-badge--accent">{{ icon.lottieRing("sunset") }}{{ icon.render("support", 22) }}</div>
+      <div style="font-weight:700;">WhatsApp</div>
+      <div class="text-muted" style="font-size:var(--fs-small);"><a href="{{ company.whatsappNumber | whatsappLink('Hi KD Holidayz, I have a question.') }}" target="_blank" rel="noopener">Quick response</a></div>
+    </div>
+    <div class="card info-card">
+      <div class="icon-badge info-card__icon icon-badge--sky">{{ icon.lottieRing("sky") }}{{ icon.render("mail", 22) }}</div>
+      <div style="font-weight:700;">Email Us</div>
+      <div class="text-muted" style="font-size:var(--fs-small);"><a href="mailto:{{ company.email }}">{{ company.email }}</a></div>
+    </div>
+    <div class="card info-card">
+      <div class="icon-badge info-card__icon icon-badge--gold">{{ icon.lottieRing("gold") }}{{ icon.render("pin", 22) }}</div>
+      <div style="font-weight:700;">Visit Office</div>
+      <div class="text-muted" style="font-size:var(--fs-small);">Jamnagar, Gujarat, India</div>
+    </div>
+    <div class="card info-card">
+      <div class="icon-badge info-card__icon">{{ icon.lottieRing("forest") }}{{ icon.render("clock", 22) }}</div>
+      <div style="font-weight:700;">Business Hours</div>
+      <div class="text-muted" style="font-size:var(--fs-small);">{{ india.businessHours }}</div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt contact__form-section">
+  <div class="container" style="display:grid; grid-template-columns:1fr 1.4fr; gap:56px;">
+    <div>
+      <div class="eyebrow">📞 We're Here to Help</div>
+      <h2>Talk to a Real Consultant</h2>
+      <p class="body-lg text-muted" style="margin-top:16px;">No call centers, no scripts. Your itinerary is planned directly with our team.</p>
+      <div style="margin-top:32px; display:flex; flex-direction:column; gap:20px;">
+        <div class="flex flex--gap-3">
+          <span style="font-size:1.3rem;">⚡</span>
+          <div>
+            <div style="font-weight:700;">Fast Response</div>
+            <div class="text-muted" style="font-size:var(--fs-small);">We aim to respond to every enquiry the same day.</div>
+          </div>
+        </div>
+        <div class="flex flex--gap-3">
+          <span style="font-size:1.3rem;">🎁</span>
+          <div>
+            <div style="font-weight:700;">Free Consultation</div>
+            <div class="text-muted" style="font-size:var(--fs-small);">No-obligation planning conversation, every time.</div>
+          </div>
+        </div>
+        <div class="flex flex--gap-3">
+          <span style="font-size:1.3rem;">🤝</span>
+          <div>
+            <div style="font-weight:700;">No-Pressure Booking</div>
+            <div class="text-muted" style="font-size:var(--fs-small);">We give you the full picture and let you decide at your pace.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <form class="card" style="padding:40px;" id="contactForm" novalidate>
+      <h3 style="margin-bottom:24px;">Send Us a Message</h3>
+      <div class="form-grid">
+        {{ forms.tourInquiryFields("c", collections.destinations, offers) }}
+        {% if formConfig.recaptchaSiteKey %}
+        <div class="form-field form-field--full g-recaptcha-container">
+          <div id="recaptchaContact"></div>
+        </div>
+        {% endif %}
+      </div>
+      <button type="submit" class="btn btn--primary btn--block" style="margin-top:24px;">Send Message</button>
+      <p class="text-muted" style="font-size:var(--fs-small); text-align:center; margin-top:12px;">🔒 Your information is only used to plan your trip.</p>
+    </form>
+  </div>
+</section>
+
+<section class="section contact__offices">
+  <div class="container">
+    <div class="section-heading section-heading--center">
+      <div class="eyebrow" style="justify-content:center;">📍 Find Us</div>
+      <h2>Our Office Locations</h2>
+    </div>
+    <div class="grid grid--2">
+      <div class="card office-card">
+        <span class="pill office-card__label">Head Office</span>
+        <h3>India, Jamnagar</h3>
+        <div class="office-card__row"><span class="text-muted">{{ icon.render("pin", 18) }}</span><span>{{ india.address }}</span></div>
+        {% for phone in india.phones %}<div class="office-card__row"><span class="text-muted">{{ icon.render("phone", 18) }}</span><a href="{{ phone | telLink }}">{{ phone }}</a></div>{% endfor %}
+        <div class="office-card__row"><span class="text-muted">{{ icon.render("mail", 18) }}</span><a href="mailto:{{ india.email }}">{{ india.email }}</a></div>
+        <div class="media-img office-card__map" style="--ph-ratio:16/9;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117985.12528992281!2d69.91198054335936!3d22.465312799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39576ab69ae4df15%3A0x63383070b357c436!2sKD%20HOLIDAYZ!5e0!3m2!1sen!2sus!4v1787501783068!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <a href="{{ company.whatsappNumber | whatsappLink('Hi, I would like to visit the Jamnagar office.') }}" class="btn btn--secondary btn--block" style="margin-top:20px;" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      </div>
+      <div class="card office-card">
+        <span class="pill office-card__label">Branch Office</span>
+        <h3>Kenya, Eldoret</h3>
+        <div class="office-card__row"><span class="text-muted">{{ icon.render("pin", 18) }}</span><span>{{ kenya.address }}</span></div>
+        {% for phone in kenya.phones %}<div class="office-card__row"><span class="text-muted">{{ icon.render("phone", 18) }}</span><a href="{{ phone | telLink }}">{{ phone }}</a></div>{% endfor %}
+        <div class="office-card__row"><span class="text-muted">{{ icon.render("mail", 18) }}</span><a href="mailto:{{ kenya.email }}">{{ kenya.email }}</a></div>
+        <div class="media-img office-card__map" style="--ph-ratio:16/9;">
+          <iframe src="https://www.google.com/maps?q={{ kenya.mapQuery | urlencode }}&output=embed" title="Map of {{ kenya.mapQuery }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+        <a href="{{ company.whatsappNumber | whatsappLink('Hi, I would like to visit the Eldoret office.') }}" class="btn btn--secondary btn--block" style="margin-top:20px;" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt contact__faq">
+  <div class="container">
+    <div class="section-heading">
+      <div class="eyebrow">❓ FAQ</div>
+      <h2>Common Questions</h2>
+    </div>
+    {{ cards.faqAccordion(faqs) }}
+  </div>
+</section>

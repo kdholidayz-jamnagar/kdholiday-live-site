@@ -1,0 +1,32 @@
+{
+  "name": "kd-holiday-2.0",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy && node scripts/minify-assets.js",
+    "generate:pdfs": "node scripts/generate-itinerary-pdfs.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "clean-css": "^5.3.3",
+    "gray-matter": "^4.0.3",
+    "gsap": "^3.15.0",
+    "jquery": "^3.4.1",
+    "lottie-web": "^5.13.0",
+    "pdf-lib": "^1.17.1",
+    "pdfkit": "^0.19.1",
+    "sharp": "^0.35.3",
+    "slick-carousel": "^1.8.1",
+    "terser": "^5.50.0"
+  }
+}

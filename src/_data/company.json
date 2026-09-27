@@ -1,0 +1,70 @@
+{
+  "name": "KD Holidayz",
+  "legalName": "KD Holidayz",
+  "tagline": "A Dream Quest Explorers!",
+  "founded": 2023,
+  "website": "https://www.kdholidayz.in",
+  "email": "info@kdholidayz.in",
+  "whatsappNumber": "+91 94297 99355",
+  "primaryPhone": "+91 94297 99355",
+  "offices": [
+    {
+      "id": "india",
+      "label": "Head Office",
+      "country": "India",
+      "city": "Jamnagar",
+      "address": "\"Hreehan Complex\", Patel Samaj, Jamnagar, Gujarat, India",
+      "phones": [
+        "+91 9429799355"
+      ],
+      "email": "info@kdholidayz.in",
+      "mapQuery": "Hreehan Complex, Patel Samaj, Jamnagar, Gujarat, India",
+      "businessHours": "9:00 AM - 6:00 PM"
+    },
+    {
+      "id": "kenya",
+      "label": "Branch Office",
+      "country": "Kenya",
+      "city": "Eldoret",
+      "address": "Ronald Ngala Street, P.O. Box 4309-30100, Eldoret, Kenya",
+      "phones": [
+        "+254 731062066",
+        "+91 8660401151"
+      ],
+      "email": "maithri.shah@kdholidayz.in",
+      "mapQuery": "Ronald Ngala Street, Eldoret, Kenya",
+      "businessHours": "9:00 AM - 6:00 PM"
+    }
+  ],
+  "socials": {
+    "instagram": "https://www.instagram.com/kdholidayz_jamnagar/",
+    "facebook": "https://www.instagram.com/kdholidayz_jamnagar/",
+    "youtube": "",
+    "linkedin": ""
+  },
+  "stats": [
+    {
+      "label": "Happy Customers",
+      "value": 100,
+      "suffix": "+"
+    },
+    {
+      "label": "Destinations Covered",
+      "value": 50,
+      "suffix": "+"
+    },
+    {
+      "label": "Tours Completed",
+      "value": 120,
+      "suffix": "+"
+    },
+    {
+      "label": "Years of Experience",
+      "value": 8,
+      "suffix": "+"
+    }
+  ],
+  "mission": "To deliver personalized, reliable and seamless travel solutions with expert guidance, trusted partnerships and exceptional customer service.",
+  "vision": "To become a trusted global travel partner, creating memorable journeys and meaningful experiences around the world.",
+  "notes": "Fields set to null are confirmed gaps from the client requirement list (Section 5 of docs/website-build-brief.md). Do not invent numbers or copy here; wire the templates to show a TODO state instead."
+}

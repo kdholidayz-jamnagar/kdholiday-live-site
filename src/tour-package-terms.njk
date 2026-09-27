@@ -1,0 +1,427 @@
+---
+layout: layouts/base.njk
+title: "Tour Package Terms & Conditions"
+description: "KD Holidayz tour package terms: inclusions, itineraries, cancellations, force majeure and refunds for holiday packages."
+---
+{% import "partials/page-banner.njk" as banner with context %}
+{% import "partials/icons.njk" as icon %}
+{% set india = company.offices[0] %}
+{% set kenya = company.offices[1] %}
+
+{{ banner.render([{"label":"Home","url":"/"},{"label":"Tour Package Terms"}], "🧳 Holiday Packages", "Tour Package Terms & Conditions", null, "tour-package-terms") }}
+
+<section class="privacy-v2">
+  <div class="container">
+    <div class="legal-meta text-muted">
+      <span class="pill">Effective Date: 22 September 2026</span>
+      <span class="pill">Last Updated: 22 September 2026</span>
+    </div>
+
+    <div class="privacy-v2__layout">
+      <aside class="privacy-v2__sidebar">
+        <div class="card privacy-v2__sidebar-card">
+          <div class="privacy-v2__progress" aria-hidden="true"><div class="privacy-v2__progress-bar" id="pvProgressBar"></div></div>
+          <div class="privacy-v2__meta text-muted">📖 29 sections · ~7 min read</div>
+          <nav class="privacy-v2__nav" id="pvNav" aria-label="Tour package terms categories">
+            <a href="#cat-pricing" data-cat="cat-pricing"><span class="privacy-v2__nav-icon">{{ icon.render("tag", 16) }}</span>Booking &amp; Pricing</a>
+            <a href="#cat-included" data-cat="cat-included"><span class="privacy-v2__nav-icon">{{ icon.render("globe", 16) }}</span>What's Included</a>
+            <a href="#cat-responsibilities" data-cat="cat-responsibilities"><span class="privacy-v2__nav-icon">{{ icon.render("person", 16) }}</span>Your Responsibilities</a>
+            <a href="#cat-changes" data-cat="cat-changes"><span class="privacy-v2__nav-icon">{{ icon.render("coin", 16) }}</span>Changes &amp; Cancellation</a>
+            <a href="#cat-forcemajeure" data-cat="cat-forcemajeure"><span class="privacy-v2__nav-icon">{{ icon.render("shield", 16) }}</span>Force Majeure &amp; Insurance</a>
+            <a href="#cat-refunds" data-cat="cat-refunds"><span class="privacy-v2__nav-icon">{{ icon.render("compass", 16) }}</span>Refunds, Complaints &amp; Media</a>
+            <a href="#cat-legal" data-cat="cat-legal"><span class="privacy-v2__nav-icon">{{ icon.render("mail", 16) }}</span>Legal &amp; Contact</a>
+          </nav>
+          <div class="privacy-v2__actions">
+            <button type="button" class="btn btn--ghost btn--sm" id="pvExpandAll">Expand All</button>
+            <button type="button" class="btn btn--ghost btn--sm" id="pvCollapseAll">Collapse All</button>
+          </div>
+        </div>
+      </aside>
+
+      <div class="privacy-v2__main">
+        <section class="privacy-v2__category" id="cat-pricing">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("tag", 20) }}</span>
+            <h2>Booking &amp; Pricing</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item is-open">
+              <button class="accordion__trigger" type="button" aria-expanded="true">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">1. Scope</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>These Tour Package Terms apply to domestic and international holiday packages, customised itineraries, honeymoon packages, group tours, destination packages and other bundled travel arrangements offered by KD Holidayz.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">2. Package Confirmation</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>A package quotation or itinerary is provisional until required payment is received and the package is confirmed in writing. Components may be subject to availability until confirmation.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">3. Package Price</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Package prices may include only the inclusions specifically stated in the quotation or booking confirmation. Taxes, visa fees, insurance, meals, transfers, activities, tips, personal expenses and other items are excluded unless expressly included.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">4. Price Changes Before Confirmation</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Prices may change before confirmation due to airfare, hotel availability, exchange rates, taxes, fuel surcharges, supplier revisions or other factors. The price confirmed in the final booking documentation applies to the confirmed booking, subject to stated conditions.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">5. Inclusions and Exclusions</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Customers should carefully review the inclusion and exclusion section of their itinerary. Items not expressly included should be treated as excluded unless subsequently confirmed in writing.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="privacy-v2__category" id="cat-included">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("globe", 20) }}</span>
+            <h2>What's Included</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">6. Itinerary</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>An itinerary is prepared based on available supplier information and operational feasibility. The sequence, timing or specific service may change due to weather, road conditions, local events, supplier operations, government restrictions or other circumstances.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">7. Transportation</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Transfers, coaches, cars, trains, ferries, domestic flights and other transportation are subject to supplier availability and operational conditions. Vehicle type, route and timing may change where reasonably necessary.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">8. Sightseeing and Activities</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Sightseeing, excursions, safari, adventure activities, cruises and other experiences are subject to availability, weather, safety conditions, local regulations and supplier rules. Some activities may carry age, health or physical requirements.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">9. Hotels Within Packages</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Hotel accommodation is subject to the <a href="/hotel-accommodation-terms/">Hotel &amp; Accommodation Terms</a> and the confirmed property/supplier conditions. A hotel may be replaced by an equivalent or alternative property where permitted by the package terms or required by operational circumstances.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">10. Meals</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Meal inclusions are limited to those specifically stated. Restaurant schedules, menus and meal arrangements may vary. Special dietary requests should be communicated before travel and remain subject to availability.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">11. Guide and Tour Services</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Guides, escorts and local representatives are provided where included and available. Their schedules and services may be affected by local operational conditions.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="privacy-v2__category" id="cat-responsibilities">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("person", 20) }}</span>
+            <h2>Your Responsibilities</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">12. Customer Responsibilities</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Customers must provide accurate traveller details, comply with visa and entry requirements, follow local laws and supplier instructions, maintain required documents and arrive at designated meeting points on time.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">13. Passport, Visa and Entry Requirements</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Customers are responsible for holding valid passports, visas, permits and other required documents. KD Holidayz may provide assistance but cannot guarantee visa approval or entry into a destination.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">19. Group Size</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Where a package is based on a minimum or specified group size, pricing and inclusions may depend on that group size. Changes in group composition may affect the package price or arrangements where stated in the booking terms.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">20. Child and Infant Policies</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Child ages, extra beds, meals, entrance fees and infant policies vary by supplier and destination. The ages of children must be accurately disclosed at booking.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">21. Personal Expenses</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Unless specifically included, customers are responsible for personal expenses including shopping, laundry, room service, minibar, tips, porterage, telephone charges, optional activities and other incidental expenses.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">22. Health and Fitness</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Customers should consider their health, mobility and ability to participate in planned activities. Any relevant medical, dietary or accessibility requirements should be communicated before booking.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="privacy-v2__category" id="cat-changes">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("coin", 20) }}</span>
+            <h2>Changes &amp; Cancellation</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">14. Cancellation</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Package cancellations are subject to the cancellation conditions stated in the quotation or booking confirmation and the applicable supplier rules. Different components may have different cancellation penalties.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">15. Amendments</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Customer-requested changes to travel dates, hotels, flights, room categories, activities or other components are subject to availability and may attract supplier penalties, fare differences and service charges.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">16. No-Show and Unused Services</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Unused flights, hotels, transfers, sightseeing, meals or other package components may not be refundable unless the applicable supplier terms provide otherwise. Failure to join a tour at the specified time may be treated as a no-show.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">17. Supplier Changes</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Suppliers may change schedules, accommodation, transport, activities or other arrangements. KD Holidayz will make reasonable efforts to provide suitable alternatives where a material change occurs.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="privacy-v2__category" id="cat-forcemajeure">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("shield", 20) }}</span>
+            <h2>Force Majeure &amp; Insurance</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">18. Force Majeure</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Natural disasters, severe weather, pandemics, strikes, political unrest, war, terrorism, government restrictions, border closures, transportation disruption and other events beyond reasonable control may require changes or cancellation. Refunds or alternatives will depend on supplier rules and applicable law.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">23. Travel Insurance</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Travel insurance is recommended. Coverage for cancellation, medical emergencies, baggage and other events depends on the insurance policy and insurer's terms.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="privacy-v2__category" id="cat-refunds">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("compass", 20) }}</span>
+            <h2>Refunds, Complaints &amp; Media</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">24. Refunds</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Where a refund is available, it will generally be calculated based on amounts refundable by the relevant suppliers after applicable cancellation penalties, non-refundable components, taxes, service charges and other permitted deductions.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">25. Complaints During Travel</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Customers should report significant issues promptly to the local supplier and KD Holidayz so that reasonable corrective action can be attempted during the trip. Complaints raised only after completion may be more difficult to resolve.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">26. Photography and Marketing</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Photographs and videos used in promotional material are generally illustrative and may not represent the exact room, vehicle, group, activity or experience received. Any use of customer images for marketing should be subject to appropriate consent where required.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">27. Third-Party Suppliers</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Hotels, airlines, DMCs, transport companies, activity operators and other suppliers are independent providers. Their terms and operational decisions may apply to the relevant component.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="privacy-v2__category" id="cat-legal">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("mail", 20) }}</span>
+            <h2>Legal &amp; Contact</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">28. Contact Details</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>KD Holidayz, Registered Proprietorship</p>
+                <div class="legal-offices">
+                  <div class="legal-office">
+                    <span class="pill office-card__label">India</span>
+                    <div class="office-card__row"><span class="text-muted">{{ icon.render("pin", 18) }}</span><span>{{ india.address }}</span></div>
+                    {% for phone in india.phones %}<div class="office-card__row"><span class="text-muted">{{ icon.render("phone", 18) }}</span><a href="{{ phone | telLink }}">{{ phone }}</a></div>{% endfor %}
+                    <div class="office-card__row"><span class="text-muted">{{ icon.render("mail", 18) }}</span><a href="mailto:{{ india.email }}">{{ india.email }}</a></div>
+                  </div>
+                  <div class="legal-office">
+                    <span class="pill office-card__label">Kenya Branch</span>
+                    <div class="office-card__row"><span class="text-muted">{{ icon.render("pin", 18) }}</span><span>{{ kenya.address }}</span></div>
+                    {% for phone in kenya.phones %}<div class="office-card__row"><span class="text-muted">{{ icon.render("phone", 18) }}</span><a href="{{ phone | telLink }}">{{ phone }}</a></div>{% endfor %}
+                    <div class="office-card__row"><span class="text-muted">{{ icon.render("mail", 18) }}</span><a href="mailto:{{ kenya.email }}">{{ kenya.email }}</a></div>
+                  </div>
+                </div>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">29. Acknowledgement</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>By confirming a tour package with KD Holidayz, the customer acknowledges that the confirmed itinerary, inclusions, exclusions, supplier conditions and applicable KD Holidayz policies govern the package.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <p class="text-muted" style="text-align:center; margin-top:var(--space-6);">© 2026 KD Holidayz. All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var progressBar = document.getElementById("pvProgressBar");
+  if (progressBar) {
+    var onScroll = function () {
+      var el = document.documentElement;
+      var scrollTop = el.scrollTop || document.body.scrollTop;
+      var height = el.scrollHeight - el.clientHeight;
+      var pct = height > 0 ? (scrollTop / height) * 100 : 0;
+      progressBar.style.width = pct + "%";
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
+  var navLinks = document.querySelectorAll("#pvNav a");
+  var categories = document.querySelectorAll(".privacy-v2__category");
+  if (categories.length && navLinks.length && "IntersectionObserver" in window) {
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(function (l) { l.classList.remove("is-active"); });
+        var link = document.querySelector('#pvNav a[data-cat="' + entry.target.id + '"]');
+        if (link) link.classList.add("is-active");
+      });
+    }, { rootMargin: "-15% 0px -70% 0px", threshold: 0 });
+    categories.forEach(function (c) { obs.observe(c); });
+  }
+
+  var expandBtn = document.getElementById("pvExpandAll");
+  var collapseBtn = document.getElementById("pvCollapseAll");
+  function setAll(open) {
+    document.querySelectorAll(".privacy-v2 .accordion__item").forEach(function (item) {
+      item.classList.toggle("is-open", open);
+      var trigger = item.querySelector(".accordion__trigger");
+      if (trigger) trigger.setAttribute("aria-expanded", String(open));
+    });
+  }
+  if (expandBtn) expandBtn.addEventListener("click", function () { setAll(true); });
+  if (collapseBtn) collapseBtn.addEventListener("click", function () { setAll(false); });
+})();
+</script>

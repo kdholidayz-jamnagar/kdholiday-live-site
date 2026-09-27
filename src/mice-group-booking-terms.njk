@@ -1,0 +1,436 @@
+---
+layout: layouts/base.njk
+title: "MICE & Group Booking Terms & Conditions"
+description: "KD Holidayz MICE and group booking terms: corporate travel, conferences, events and group tour arrangements."
+---
+{% import "partials/page-banner.njk" as banner with context %}
+{% import "partials/icons.njk" as icon %}
+{% set india = company.offices[0] %}
+{% set kenya = company.offices[1] %}
+
+{{ banner.render([{"label":"Home","url":"/"},{"label":"MICE & Group Booking Terms"}], "🏢 Corporate & Groups", "MICE & Group Booking Terms & Conditions", null, "mice-group-booking-terms") }}
+
+<section class="privacy-v2">
+  <div class="container">
+    <div class="legal-meta text-muted">
+      <span class="pill">Effective Date: 22 September 2026</span>
+      <span class="pill">Last Updated: 22 September 2026</span>
+    </div>
+
+    <div class="privacy-v2__layout">
+      <aside class="privacy-v2__sidebar">
+        <div class="card privacy-v2__sidebar-card">
+          <div class="privacy-v2__progress" aria-hidden="true"><div class="privacy-v2__progress-bar" id="pvProgressBar"></div></div>
+          <div class="privacy-v2__meta text-muted">📖 30 sections · ~7 min read</div>
+          <nav class="privacy-v2__nav" id="pvNav" aria-label="MICE and group booking terms categories">
+            <a href="#cat-basics" data-cat="cat-basics"><span class="privacy-v2__nav-icon">{{ icon.render("tag", 16) }}</span>Group Booking Basics</a>
+            <a href="#cat-participants" data-cat="cat-participants"><span class="privacy-v2__nav-icon">{{ icon.render("person", 16) }}</span>Participants &amp; Documents</a>
+            <a href="#cat-logistics" data-cat="cat-logistics"><span class="privacy-v2__nav-icon">{{ icon.render("globe", 16) }}</span>Event &amp; Travel Logistics</a>
+            <a href="#cat-changes" data-cat="cat-changes"><span class="privacy-v2__nav-icon">{{ icon.render("coin", 16) }}</span>Changes &amp; Cancellation</a>
+            <a href="#cat-forcemajeure" data-cat="cat-forcemajeure"><span class="privacy-v2__nav-icon">{{ icon.render("shield", 16) }}</span>Force Majeure &amp; Insurance</a>
+            <a href="#cat-coordination" data-cat="cat-coordination"><span class="privacy-v2__nav-icon">{{ icon.render("compass", 16) }}</span>Payments, Coordination &amp; Complaints</a>
+            <a href="#cat-legal" data-cat="cat-legal"><span class="privacy-v2__nav-icon">{{ icon.render("mail", 16) }}</span>Legal &amp; Contact</a>
+          </nav>
+          <div class="privacy-v2__actions">
+            <button type="button" class="btn btn--ghost btn--sm" id="pvExpandAll">Expand All</button>
+            <button type="button" class="btn btn--ghost btn--sm" id="pvCollapseAll">Collapse All</button>
+          </div>
+        </div>
+      </aside>
+
+      <div class="privacy-v2__main">
+        <section class="privacy-v2__category" id="cat-basics">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("tag", 20) }}</span>
+            <h2>Group Booking Basics</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item is-open">
+              <button class="accordion__trigger" type="button" aria-expanded="true">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">1. Scope</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>These MICE &amp; Group Booking Terms apply to corporate travel, conferences, meetings, incentives, exhibitions, educational groups, social groups, destination events and other group travel arrangements organised or facilitated by KD Holidayz.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">2. Group Definition</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>A group booking may be subject to a minimum number of travellers as stated in the quotation. The group size may affect airfare, accommodation, transport, meals, activities, venue rates and other arrangements.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">3. Proposal and Confirmation</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>A proposal, itinerary or quotation is not a confirmed group booking until the required acceptance and payment conditions have been completed and KD Holidayz has issued written confirmation.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">4. Group Deposit</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>A non-refundable or partially refundable deposit may be required to secure group arrangements, depending on the supplier and package. The amount and deadline will be stated in the proposal or invoice.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">5. Balance Payment</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>The balance payment deadline will be stated in the quotation or booking confirmation. Suppliers may release rooms, flights, venues or other services if payment is not received by the stated deadline.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="privacy-v2__category" id="cat-participants">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("person", 20) }}</span>
+            <h2>Participants &amp; Documents</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">6. Participant List</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>The group organiser must provide accurate participant names, passport details, dates of birth and other required information within the deadline specified by KD Holidayz or the supplier.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">7. Name Changes</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Name changes, corrections and substitutions may be subject to airline, hotel, venue or supplier rules and charges. Some group fares or bookings may have strict name deadlines.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">8. Rooming List</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>For accommodation groups, the organiser must provide a rooming list by the agreed deadline. Room allocation, bed configuration, connecting rooms and special requests remain subject to hotel availability.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">22. Special Requirements</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Accessibility, dietary, medical, religious, mobility, child or other special requirements should be disclosed as early as possible. Arrangements remain subject to supplier availability and applicable charges.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">23. Travel Documents and Visa</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Each participant is responsible for holding valid travel documents and complying with visa, immigration, health and entry requirements. KD Holidayz may assist with visa processing where requested but does not guarantee approval.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="privacy-v2__category" id="cat-logistics">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("globe", 20) }}</span>
+            <h2>Event &amp; Travel Logistics</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">9. Flights for Groups</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Group airfare may be governed by special airline conditions, deposit deadlines, name deadlines, ticketing deadlines and minimum group-size requirements. Airline rules apply to the relevant flight component.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">10. Venue and Event Services</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Meeting rooms, conference venues, equipment, staging, audio-visual services, catering, branding, entertainment and other event services are subject to the confirmed supplier proposal. Changes may result in additional charges.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">11. Food and Beverage</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Menus, meal counts, dietary requirements and beverage arrangements must be communicated by the agreed deadline. Changes after the deadline may incur additional charges or may not be possible.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">12. Transportation</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Group transfers and vehicles are planned based on the confirmed group size, luggage and itinerary. Changes in passenger numbers or luggage may require a larger vehicle or additional cost.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="privacy-v2__category" id="cat-changes">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("coin", 20) }}</span>
+            <h2>Changes &amp; Cancellation</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">13. Group Size Changes</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>A reduction or increase in the number of participants may affect supplier rates and package pricing. Any revised pricing will be communicated where reasonably practicable.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">14. Cancellation by Group Organiser</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Cancellation of a group may attract cancellation charges from airlines, hotels, venues, DMCs, transport providers and other suppliers. The applicable cancellation schedule will be stated in the group quotation or confirmation.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">15. Individual Participant Cancellation</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Where permitted, individual participants may be cancelled or replaced subject to supplier rules. The effect on the remaining group price will depend on the applicable booking conditions.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">16. No-Show</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>A participant who does not travel or attend without timely cancellation may be treated as a no-show. Supplier penalties and loss of services may apply.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">17. Group Itinerary Changes</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Changes requested by the organiser after confirmation may affect availability, pricing, deposits and supplier penalties. Changes are subject to written confirmation.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">18. Event Cancellation or Supplier Failure</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>If a venue, hotel, airline, DMC or other supplier cancels or cannot provide a confirmed service, KD Holidayz will reasonably assist with alternative arrangements or applicable supplier refund options.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="privacy-v2__category" id="cat-forcemajeure">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("shield", 20) }}</span>
+            <h2>Force Majeure &amp; Insurance</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">19. Force Majeure</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Natural disasters, severe weather, pandemics, government restrictions, strikes, political unrest, war, terrorism, border closures and other events outside reasonable control may affect group travel or events. Available alternatives and refunds depend on supplier terms and applicable law.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">24. Insurance</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Group organisers and participants are encouraged to obtain appropriate travel insurance. Insurance coverage depends on the policy and insurer.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="privacy-v2__category" id="cat-coordination">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("compass", 20) }}</span>
+            <h2>Payments, Coordination &amp; Complaints</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">20. Corporate and Confidential Information</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>For corporate and MICE bookings, KD Holidayz may receive business contact details, participant lists, event information and other operational information. Such information will be handled in accordance with applicable privacy requirements and the KD Holidayz <a href="/privacy-policy/">Privacy Policy</a>.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">21. Photography and Event Content</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Where photography or video services are arranged, the relevant event or supplier terms apply. The organiser is responsible for obtaining any permissions required from participants for event photography or promotional use, unless otherwise agreed.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">25. Payment and Currency</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Group quotations may be based on INR or foreign currency. Exchange-rate changes, bank charges, payment gateway fees and supplier currency adjustments may affect the final cost where stated in the proposal.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">26. Refunds</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Refunds, where available, will generally be based on amounts recovered from suppliers after applicable penalties, non-refundable amounts, service charges and other permitted deductions.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">27. Group Coordinator</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>The group organiser or nominated coordinator should act as the primary communication point and ensure that participants receive relevant travel information, deadlines and instructions.</p>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">28. Complaints</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>Group organisers should report material service issues promptly during the event or trip so KD Holidayz and the supplier have a reasonable opportunity to resolve them.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="privacy-v2__category" id="cat-legal">
+          <div class="privacy-v2__category-head">
+            <span class="privacy-v2__category-icon">{{ icon.render("mail", 20) }}</span>
+            <h2>Legal &amp; Contact</h2>
+          </div>
+          <div class="accordion accordion--legal">
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">29. Contact Details</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>KD Holidayz, Registered Proprietorship</p>
+                <div class="legal-offices">
+                  <div class="legal-office">
+                    <span class="pill office-card__label">India</span>
+                    <div class="office-card__row"><span class="text-muted">{{ icon.render("pin", 18) }}</span><span>{{ india.address }}</span></div>
+                    {% for phone in india.phones %}<div class="office-card__row"><span class="text-muted">{{ icon.render("phone", 18) }}</span><a href="{{ phone | telLink }}">{{ phone }}</a></div>{% endfor %}
+                    <div class="office-card__row"><span class="text-muted">{{ icon.render("mail", 18) }}</span><a href="mailto:{{ india.email }}">{{ india.email }}</a></div>
+                  </div>
+                  <div class="legal-office">
+                    <span class="pill office-card__label">Kenya Branch</span>
+                    <div class="office-card__row"><span class="text-muted">{{ icon.render("pin", 18) }}</span><span>{{ kenya.address }}</span></div>
+                    {% for phone in kenya.phones %}<div class="office-card__row"><span class="text-muted">{{ icon.render("phone", 18) }}</span><a href="{{ phone | telLink }}">{{ phone }}</a></div>{% endfor %}
+                    <div class="office-card__row"><span class="text-muted">{{ icon.render("mail", 18) }}</span><a href="mailto:{{ kenya.email }}">{{ kenya.email }}</a></div>
+                  </div>
+                </div>
+              </div></div>
+            </div>
+            <div class="accordion__item">
+              <button class="accordion__trigger" type="button" aria-expanded="false">
+                <span class="accordion__badge"><span class="accordion__icon" aria-hidden="true"></span></span>
+                <span class="accordion__question">30. Acknowledgement</span>
+              </button>
+              <div class="accordion__panel"><div class="accordion__panel-inner">
+                <p>By confirming a MICE or group booking, the organiser acknowledges that the agreed proposal, supplier conditions, payment schedule, cancellation schedule and applicable KD Holidayz policies govern the booking.</p>
+              </div></div>
+            </div>
+          </div>
+        </section>
+
+        <p class="text-muted" style="text-align:center; margin-top:var(--space-6);">© 2026 KD Holidayz. All Rights Reserved.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function () {
+  var progressBar = document.getElementById("pvProgressBar");
+  if (progressBar) {
+    var onScroll = function () {
+      var el = document.documentElement;
+      var scrollTop = el.scrollTop || document.body.scrollTop;
+      var height = el.scrollHeight - el.clientHeight;
+      var pct = height > 0 ? (scrollTop / height) * 100 : 0;
+      progressBar.style.width = pct + "%";
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
+  var navLinks = document.querySelectorAll("#pvNav a");
+  var categories = document.querySelectorAll(".privacy-v2__category");
+  if (categories.length && navLinks.length && "IntersectionObserver" in window) {
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(function (l) { l.classList.remove("is-active"); });
+        var link = document.querySelector('#pvNav a[data-cat="' + entry.target.id + '"]');
+        if (link) link.classList.add("is-active");
+      });
+    }, { rootMargin: "-15% 0px -70% 0px", threshold: 0 });
+    categories.forEach(function (c) { obs.observe(c); });
+  }
+
+  var expandBtn = document.getElementById("pvExpandAll");
+  var collapseBtn = document.getElementById("pvCollapseAll");
+  function setAll(open) {
+    document.querySelectorAll(".privacy-v2 .accordion__item").forEach(function (item) {
+      item.classList.toggle("is-open", open);
+      var trigger = item.querySelector(".accordion__trigger");
+      if (trigger) trigger.setAttribute("aria-expanded", String(open));
+    });
+  }
+  if (expandBtn) expandBtn.addEventListener("click", function () { setAll(true); });
+  if (collapseBtn) collapseBtn.addEventListener("click", function () { setAll(false); });
+})();
+</script>

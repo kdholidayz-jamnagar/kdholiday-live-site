@@ -1,0 +1,23 @@
+{% import "macros/forms.njk" as forms %}
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="drawer" id="quickDrawer" aria-hidden="true" inert>
+  <button class="drawer__close" id="drawerClose" type="button" aria-label="Close">×</button>
+  <h3>Plan Your Journey ✈️</h3>
+  <div class="drawer__context" id="drawerContext" style="display:none;">
+    📍 Selected destination: <strong id="drawerDestination"></strong>
+  </div>
+  <form id="drawerForm" novalidate style="display:flex; flex-direction:column; gap:16px; margin-top:24px;">
+    {{ forms.tourInquiryFields("d", collections.destinations, offers) }}
+    {% if formConfig.recaptchaSiteKey %}
+    <div class="form-field g-recaptcha-container">
+      <div id="recaptchaDrawer"></div>
+    </div>
+    {% endif %}
+    <button type="submit" class="btn btn--primary btn--block">Submit Enquiry 🚀</button>
+    <p class="text-muted" style="font-size:var(--fs-small); text-align:center;">🔒 Your information is only used to plan your trip.</p>
+  </form>
+  <div class="drawer__success" id="drawerSuccess">
+    <h3>Enquiry Submitted!</h3>
+    <p class="text-muted">Thank you! Our consultant will reach out shortly.</p>
+  </div>
+</aside>

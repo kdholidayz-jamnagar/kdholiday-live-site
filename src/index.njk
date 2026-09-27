@@ -1,0 +1,349 @@
+---
+layout: layouts/base.njk
+title: "Home"
+description: "KD Holidayz: A Dream Quest Explorers. Domestic and international travel consulting from Jamnagar, India, with a branch in Eldoret, Kenya."
+preloadImage: "/images/photos/rajasthan.jpg"
+---
+{% import "macros/cards.njk" as cards %}
+{% import "partials/icons.njk" as icon %}
+
+<script src="/js/vendor/jquery.min.js" defer></script>
+<script src="/js/vendor/slick.min.js" defer></script>
+
+<div class="announcement" id="announcement">
+  <div class="container">
+    🏔️ Chardham Yatra 2026: Helicopter & Land packages now open. <a href="/destinations/char-dham-yatra/">Explore the itinerary →</a>
+  </div>
+  <button class="announcement__close" id="announcementClose" aria-label="Dismiss">×</button>
+</div>
+
+<section class="hero home__hero">
+  <div class="hero__slider" id="heroSlider">
+    {% set slides = [
+      {"src": "/images/photos/rajasthan.jpg", "alt": "Neemrana Fort, Rajasthan", "title": "Trust", "desc": "Honest and transparent travel services"},
+      {"src": "/images/photos/kerala.jpg", "alt": "Kerala backwaters at sunrise", "title": "Customer First", "desc": "Every journey designed around the traveller"},
+      {"src": "/images/photos/dubai.jpg", "alt": "Burj Khalifa, Dubai", "title": "Excellence", "desc": "Quality in every detail"},
+      {"src": "/images/photos/africa.jpg", "alt": "Safari in Kenya", "title": "Innovation", "desc": "Smarter and better ways to travel"},
+      {"src": "/images/photos/kedarnath.jpg", "alt": "Kedarnath Temple, Himalayas", "title": "Global Connect", "desc": "Strong India–Africa and international partnerships"},
+      {"src": "/images/photos/bali.jpg", "alt": "Bali island shoreline", "title": "Responsibility", "desc": "Encouraging safe and responsible travel"},
+      {"src": "/images/photos/switzerland.jpg", "alt": "Swiss Alps", "title": "Personalization", "desc": "Experiences designed to suit individual needs"}
+    ] %}
+    {% for slide in slides %}
+    {% if loop.first %}
+    <div class="hero__slide is-active" style="background-image:url('{{ slide.src }}');" role="img" aria-label="{{ slide.alt }}" data-value-title="{{ slide.title }}" data-value-desc="{{ slide.desc }}"></div>
+    {% else %}
+    <div class="hero__slide" data-bg="{{ slide.src }}" role="img" aria-label="{{ slide.alt }}" data-value-title="{{ slide.title }}" data-value-desc="{{ slide.desc }}"></div>
+    {% endif %}
+    {% endfor %}
+  </div>
+  <div class="hero__overlay"></div>
+  <div class="container">
+    <div class="hero__content">
+      <span class="pill pill--dark">✨ {{ company.tagline }}</span>
+      <h1 style="margin-top:20px;">Discover the World, <span style="color:var(--color-gold);">Your Way</span></h1>
+      <p class="hero__value" id="heroValue"><strong>{{ slides[0].title }}:</strong> {{ slides[0].desc }}</p>
+      <p class="hero__lede">Personal, consultant-led travel planning for everything from Himalayan pilgrimages to island honeymoons. Your journey starts with a conversation, not a template.</p>
+      <div class="hero__actions">
+        <a href="/destinations/" class="btn btn--primary">🌍 Explore Destinations</a>
+        <button class="btn btn--outline" data-drawer-open type="button">🎨 Customize My Trip</button>
+      </div>
+      <div class="hero__search-wrap">
+        <form class="hero__search" autocomplete="off">
+          <input type="text" placeholder="Where do you want to go?" aria-label="Search destinations">
+          <button class="btn btn--primary" type="submit">Search</button>
+        </form>
+        <div class="hero-search__dropdown" id="heroSearchDropdown"></div>
+      </div>
+      <div class="hero__rating">
+        <span>Head Office: Jamnagar, India</span>
+        <span>·</span>
+        <span>Branch: Eldoret, Kenya</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero__dots" id="heroDots">
+    {% for slide in slides %}
+    <button class="hero__dot{% if loop.first %} is-active{% endif %}" data-slide-index="{{ loop.index0 }}" aria-label="Show slide {{ loop.index }}" type="button"></button>
+    {% endfor %}
+  </div>
+</section>
+
+<div class="no-match-modal" id="noMatchModal">
+  <div class="no-match-modal__box">
+    <button class="no-match-modal__close" id="noMatchClose" type="button" aria-label="Close">×</button>
+    <div class="eyebrow">🎨 Let's Build It Together</div>
+    <h3>We don't have a ready-made package for "<span id="noMatchQuery"></span>" yet</h3>
+    <p class="text-muted" style="margin-top:8px;">But that's exactly what we're built for. Tell us where you want to go, and our consultants will design a custom itinerary and package around it.</p>
+    <button class="btn btn--primary" id="noMatchRequestBtn" type="button" style="margin-top:20px;">Request Custom Package 🚀</button>
+    <div class="no-match-modal__explore">
+      <p class="text-muted" style="font-size:var(--fs-small); text-transform:uppercase; letter-spacing:0.04em;">Or explore these destinations instead</p>
+      <div class="explore-slick" id="exploreSlickTrack"></div>
+    </div>
+  </div>
+</div>
+
+<section class="section--sm section--alt home__stats">
+  <div class="container">
+    <div class="section-heading section-heading--center">
+      <div class="eyebrow" style="justify-content:center;">📊 Our Track Record</div>
+      <h2>Let the Numbers Speak</h2>
+      <p class="body-lg text-muted">Years of trusted travel planning, measured in journeys and smiles.</p>
+    </div>
+    <div class="grid grid--4" data-reveal>
+      {% for stat in company.stats %}
+        {{ cards.statTile(stat) }}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section home__promise">
+  <div class="container home__promise__grid">
+    <div data-reveal>
+      <div class="eyebrow">✦ Our Promise</div>
+      <h2>Why Travelers Choose KD Holidayz</h2>
+      <p class="body-lg text-muted" style="margin-top:16px;">{{ company.tagline }} We go beyond selling packages: every trip is consulted, planned, and delivered personally.</p>
+      <a href="/about/" class="btn btn--secondary" style="margin-top:24px;">Learn Our Story</a>
+    </div>
+    <div data-reveal>
+      {% set reasons = [
+        {"title": "Best Price Guarantee", "desc": "Transparent pricing with no hidden charges.", "icon": "coin"},
+        {"title": "Trusted by Travelers", "desc": "Real testimonials from Char Dham to Europe.", "icon": "star"},
+        {"title": "Personal Consultation", "desc": "Your itinerary is planned directly with our founder.", "icon": "compass"},
+        {"title": "Two-Country Presence", "desc": "On-ground support from our India and Kenya offices.", "icon": "globe"},
+        {"title": "Fully Customized Trips", "desc": "Every package can be tailored to your budget and pace.", "icon": "suitcase"},
+        {"title": "End-to-End Support", "desc": "Flights, hotels, visas, and insurance, all handled for you.", "icon": "shield"}
+      ] %}
+      {% for r in reasons %}
+      <div class="why-item">
+        <div class="why-item__icon">{{ icon.lottieRing("gold") }}{{ icon.render(r.icon, 22) }}</div>
+        <div>
+          <div class="why-item__title">{{ r.title }}</div>
+          <div class="text-muted" style="font-size:var(--fs-small);">{{ r.desc }}</div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt featured-destinations home__featured">
+  <div class="featured-decor" id="featuredDecor" aria-hidden="true">
+    <img src="/images/decor/flight-doodle.svg" alt="" loading="lazy">
+  </div>
+  <div class="container">
+    <div class="section-heading">
+      <div class="eyebrow">🌏 Explore</div>
+      <h2>Featured Destinations</h2>
+      <p class="body-lg text-muted">Domestic circuits and international getaways, planned around you.</p>
+    </div>
+    <div class="tabs" id="destTabs">
+      <button class="is-active" data-tab="all" type="button">All</button>
+      <button data-tab="domestic" type="button">🇮🇳 Domestic</button>
+      <button data-tab="international" type="button">✈️ International</button>
+    </div>
+    <div class="grid grid--3" id="featuredGrid" data-reveal>
+      {% for item in collections.destinations %}
+        {{ cards.destinationCard(item.data, item.url) }}
+      {% endfor %}
+    </div>
+    <div style="text-align:center; margin-top:48px;">
+      <a href="/destinations/" class="btn btn--secondary">View All Destinations</a>
+    </div>
+  </div>
+</section>
+
+<section class="section home__categories">
+
+  <div class="container">
+    <div class="section-heading section-heading--center">
+      <div class="eyebrow" style="justify-content:center;">🎯 Choose Your Style</div>
+      <h2>Tour Categories</h2>
+      <p class="body-lg text-muted">Whatever kind of traveler you are, we have a package waiting.</p>
+    </div>
+    <div class="grid grid--4" data-reveal>
+      {% for cat in tourCategories %}
+        {% set catCount = (cat.count if cat.count is not none else (collections.destinations | tagCount(cat.tag))) %}
+        {{ cards.categoryTile(cat, catCount) }}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt home__gallery">
+  <div class="container">
+    <div class="section-heading">
+      <div class="eyebrow">📸 Moments</div>
+      <h2>Travel Gallery</h2>
+      <p class="body-lg text-muted">Real moments from KD Holidayz journeys: office, teams, and destinations.</p>
+    </div>
+    <div class="gallery-grid--bento" data-reveal>
+      {% set moments = [
+        {"src": "/images/photos/rajasthan.jpg", "alt": "Rajasthan Heritage Forts", "area": "a"},
+        {"src": "/images/photos/kerala.jpg", "alt": "Kerala Backwaters", "area": "b"},
+        {"src": "/images/photos/dubai.jpg", "alt": "Dubai Skyline", "area": "c"},
+        {"src": "/images/photos/africa.jpg", "alt": "Kenya Safari", "area": "d"},
+        {"src": "/images/photos/kedarnath.jpg", "alt": "Kedarnath Pilgrimage", "area": "e"},
+        {"src": "/images/photos/switzerland.jpg", "alt": "Switzerland Alps", "area": "f"},
+        {"src": "/images/photos/bali.jpg", "alt": "Bali Escape", "area": "g"}
+      ] %}
+      {% for m in moments %}
+      <div class="bento-item" style="grid-area:{{ m.area }};" data-lightbox-label="{{ m.alt }}">
+        <img src="{{ m.src }}" alt="{{ m.alt }}" loading="lazy">
+        <span class="bento-item__label">{{ m.alt }}</span>
+      </div>
+      {% endfor %}
+    </div>
+    <div style="text-align:center; margin-top:48px;">
+      <a href="/gallery/" class="btn btn--secondary">View Full Gallery</a>
+    </div>
+  </div>
+</section>
+
+<section class="section home__offers">
+  <div class="container">
+    <div class="section-heading section-heading--center">
+      <div class="eyebrow" style="justify-content:center;">🔥 Don't Miss Out</div>
+      <h2>Limited-Time Offers</h2>
+      <p class="body-lg text-muted">Genuinely time-bound departures, booked while seats last.</p>
+    </div>
+    <div class="grid grid--3" data-reveal>
+      {% for offer in offers %}
+        {{ cards.offerCard(offer) }}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt overflow-hidden home__testimonials">
+  <div class="container">
+    <div class="section-heading">
+      <div class="eyebrow">💬 Testimonials</div>
+      <h2>What Our Travelers Say</h2>
+      <p class="body-lg text-muted">Real reviews from real trips planned by KD Holidayz.</p>
+    </div>
+    <div class="testimonial-slick">
+      {% for t in testimonials %}
+        <div class="testimonial-slick__slide">{{ cards.testimonialCard(t) }}</div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section home__team">
+  <div class="container">
+    <div class="section-heading section-heading--center">
+      <div class="eyebrow" style="justify-content:center;">👥 Meet The Consultants</div>
+      <h2>The People Behind Your Trip</h2>
+    </div>
+    <div class="grid grid--3" data-reveal>
+      {% for member in team %}
+        {{ cards.teamCard(member) }}
+      {% endfor %}
+    </div>
+    <div style="text-align:center; margin-top:32px;">
+      <a href="/about/" class="btn btn--secondary">More About Us</a>
+    </div>
+  </div>
+</section>
+
+<section class="section overflow-hidden home__reels">
+  <div class="container">
+    <div class="section-heading section-heading--center">
+      <div class="eyebrow" style="justify-content:center;">🎬 Watch</div>
+      <h2>Reels From Our Instagram</h2>
+      <p class="body-lg text-muted">Follow <a href="{{ company.socials.instagram }}" target="_blank" rel="noopener" style="color:var(--color-accent); font-weight:600;">@kdholidayz_jamnagar</a> for more reels from recent trips.</p>
+    </div>
+    <div class="instagram-slick">
+      {% for reel in instagramReels %}
+      <div class="instagram-slick__slide">
+        <a class="instagram-card" href="{{ reel.url }}" target="_blank" rel="noopener" aria-label="View on Instagram">
+          <div class="instagram-card__media">
+            <img src="{{ reel.thumb }}" alt="KD Holidayz Instagram reel" loading="lazy">
+            <video src="{{ reel.video }}" loop playsinline preload="none" poster="{{ reel.thumb }}"></video>
+          </div>
+          <span class="instagram-card__play">▶</span>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+    <div style="text-align:center; margin-top:40px;">
+      <a href="{{ company.socials.instagram }}" class="btn btn--secondary" target="_blank" rel="noopener">📸 Follow @kdholidayz_jamnagar</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt home__cta">
+  <div class="container">
+    <div class="cta-band">
+      <h2 style="color:var(--color-white);">Ready to Explore?</h2>
+      <p style="max-width:520px; margin-inline:auto; margin-top:16px; opacity:0.85;">Tell us where you'd like to go, and we'll take it from there.</p>
+      <div class="flex flex--gap-4" style="justify-content:center; margin-top:24px; flex-wrap:wrap;">
+        <a href="{{ company.whatsappNumber | whatsappLink('Hi KD Holidayz, I would like to plan a trip.') }}" class="btn btn--primary" target="_blank" rel="noopener">💬 Chat on WhatsApp</a>
+        <button class="btn btn--outline" data-drawer-open type="button">Enquire Now</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  jQuery(function ($) {
+    $(".testimonial-slick").slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      arrows: true,
+      dots: false,
+      infinite: true,
+      speed: 700,
+      easing: "ease-in-out",
+      cssEase: "cubic-bezier(0.4, 0, 0.2, 1)",
+      responsive: [
+        { breakpoint: 900, settings: { slidesToShow: 2 } },
+        { breakpoint: 640, settings: { slidesToShow: 1, arrows: false } }
+      ]
+    });
+
+    $(".instagram-slick").slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2200,
+      pauseOnHover: true,
+      arrows: true,
+      dots: true,
+      infinite: true,
+      speed: 700,
+      easing: "ease-in-out",
+      cssEase: "cubic-bezier(0.4, 0, 0.2, 1)",
+      responsive: [
+        { breakpoint: 992, settings: { slidesToShow: 3 } },
+        { breakpoint: 640, settings: { slidesToShow: 2 } },
+        { breakpoint: 420, settings: { slidesToShow: 1.4 } }
+      ]
+    });
+
+    document.querySelectorAll(".instagram-card").forEach(function (card) {
+      var video = card.querySelector("video");
+      if (!video) return;
+      card.addEventListener("mouseenter", function () {
+        video.currentTime = 0;
+        video.muted = false;
+        var playPromise = video.play();
+        if (playPromise && playPromise.catch) {
+          playPromise.catch(function () {
+            video.muted = true;
+            video.play();
+          });
+        }
+      });
+      card.addEventListener("mouseleave", function () {
+        video.pause();
+        video.currentTime = 0;
+      });
+    });
+  });
+});
+</script>
