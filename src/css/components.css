@@ -1,3 +1,159 @@
+/* ===== Coming Soon countdown gate — full-viewport overlay shown on every
+   page until the launch instant, then instantly collapsed to 0x0 with a
+   negative z-index so it's fully out of the layout and out of the way. ===== */
+/* Locks the whole page (both axes) behind the countdown gate — the
+   position:fixed technique on html/body is what actually stops rubber-band
+   scroll on iOS/mobile Safari, not overflow:hidden alone. */
+html.coming-soon-lock,
+body.coming-soon-lock {
+  overflow: hidden !important;
+  overscroll-behavior: none;
+  touch-action: none;
+  height: 100%;
+}
+
+body.coming-soon-lock {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+}
+
+.coming-soon {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  overscroll-behavior: none;
+  touch-action: none;
+  padding: var(--space-5);
+  background: radial-gradient(circle at 20% 20%, rgba(224, 164, 0, 0.25), transparent 45%),
+    radial-gradient(circle at 80% 80%, rgba(197, 58, 8, 0.25), transparent 45%),
+    linear-gradient(160deg, var(--color-ocean) 0%, var(--color-primary-dark) 100%);
+}
+
+.coming-soon.is-launched {
+  width: 0;
+  height: 0;
+  z-index: -1;
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.coming-soon__glass {
+  position: relative;
+  z-index: 1;
+  width: min(92vw, 560px);
+  text-align: center;
+  padding: var(--space-7) var(--space-6);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-lg);
+  color: var(--color-white);
+}
+
+.coming-soon__logo-wrap {
+  display: inline-block;
+  background: var(--color-white);
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--space-5);
+}
+
+.coming-soon__logo {
+  display: block;
+  height: 48px;
+  width: auto;
+}
+
+.coming-soon__tagline {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  color: var(--color-gold);
+  margin-bottom: var(--space-6);
+  letter-spacing: 0.02em;
+}
+
+.coming-soon__timer {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-5);
+  flex-wrap: wrap;
+}
+
+.coming-soon__unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 64px;
+}
+
+.coming-soon__value {
+  font-family: var(--font-heading);
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.coming-soon__label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.75;
+  margin-top: var(--space-2);
+}
+
+.coming-soon__final {
+  display: none;
+  font-family: var(--font-heading);
+  font-size: clamp(6rem, 26vw, 13rem);
+  font-weight: 700;
+  color: var(--color-gold);
+  line-height: 1;
+  text-shadow: 0 0 60px rgba(224, 164, 0, 0.55);
+}
+
+.coming-soon.is-final .coming-soon__timer {
+  display: none;
+}
+
+.coming-soon.is-final .coming-soon__final {
+  display: block;
+}
+
+.coming-soon__note {
+  margin-top: var(--space-6);
+  font-size: 0.9rem;
+  opacity: 0.8;
+  max-width: 420px;
+  margin-inline: auto;
+}
+
+@media (max-width: 600px) {
+  .coming-soon__value {
+    font-size: 1.9rem;
+  }
+
+  .coming-soon__timer {
+    gap: var(--space-4);
+  }
+
+  .coming-soon__glass {
+    padding: var(--space-6) var(--space-4);
+  }
+}
+
 /* ===== Announcement bar — fixed to the bottom of the viewport ===== */
 .announcement {
   position: fixed;

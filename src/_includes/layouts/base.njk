@@ -83,6 +83,82 @@
   </script>
 </head>
 <body>
+<div class="coming-soon" id="comingSoon">
+    <div class="coming-soon__glass">
+        <div class="coming-soon__logo-wrap">
+            <img src="/images/brand/logo-full.png" alt="{{ company.name }}" class="coming-soon__logo">
+        </div>
+        <p class="coming-soon__tagline">{{ company.tagline }}</p>
+        <div class="coming-soon__timer" id="csTimer">
+            <div class="coming-soon__unit">
+                <span class="coming-soon__value" id="csHours">00</span>
+                <span class="coming-soon__label">Hours</span>
+            </div>
+            <div class="coming-soon__unit">
+                <span class="coming-soon__value" id="csMins">00</span>
+                <span class="coming-soon__label">Minutes</span>
+            </div>
+            <div class="coming-soon__unit">
+                <span class="coming-soon__value" id="csSecs">00</span>
+                <span class="coming-soon__label">Seconds</span>
+            </div>
+        </div>
+        <div class="coming-soon__final" id="csFinal">10</div>
+        <p class="coming-soon__note">Something exciting is on its way. We're putting the final touches on your next
+            travel experience.</p>
+    </div>
+</div>
+<script>
+    (function () {
+        var target = new Date(2026, 8, 27, 12, 0, 0, 0).getTime();
+        var el = document.getElementById("comingSoon");
+        if (!el) return;
+        var finalEl = document.getElementById("csFinal");
+        var hEl = document.getElementById("csHours");
+        var mEl = document.getElementById("csMins");
+        var sEl = document.getElementById("csSecs");
+        var intervalId = null;
+
+        function pad(n) {
+            n = String(n);
+            return n.length < 2 ? "0" + n : n;
+        }
+
+        function launch() {
+            el.classList.add("is-launched");
+            document.documentElement.classList.remove("coming-soon-lock");
+            document.body.classList.remove("coming-soon-lock");
+            if (intervalId) clearInterval(intervalId);
+        }
+
+        function tick() {
+            var diff = target - Date.now();
+            if (diff <= 0) {
+                launch();
+                return;
+            }
+            if (diff <= 10000) {
+                el.classList.add("is-final");
+                finalEl.textContent = Math.ceil(diff / 1000);
+            } else {
+                el.classList.remove("is-final");
+                var totalSeconds = Math.floor(diff / 1000);
+                hEl.textContent = pad(Math.floor(totalSeconds / 3600));
+                mEl.textContent = pad(Math.floor((totalSeconds % 3600) / 60));
+                sEl.textContent = pad(totalSeconds % 60);
+            }
+        }
+
+        if (target - Date.now() <= 0) {
+            launch();
+        } else {
+            document.documentElement.classList.add("coming-soon-lock");
+            document.body.classList.add("coming-soon-lock");
+            tick();
+            intervalId = setInterval(tick, 250);
+        }
+    })();
+</script>
   {% include "partials/header.njk" %}
   <main>
     {{ content | safe }}
